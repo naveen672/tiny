@@ -13,45 +13,28 @@ export default function EmbeddedSystems() {
   const services = [
     {
       icon: <FiCpu size={28} />,
-      title: 'Custom Hardware Design',
-      description: 'Expertise in working with Low Power MCUs like nRF52, ESP32C6, STM32U5, STM32WBA.',
-      features: ['nRF52 Series', 'ESP32-C6', 'STM32U5', 'STM32WBA']
-    },
-    {
-      icon: <FiHardDrive size={28} />,
-      title: 'Schematics and PCB',
-      description: 'Designing for custom product development.',
-      features: ['Multi-layer PCB design', 'Signal integrity analysis', 'Component placement', 'Production-ready']
+      title: 'Strategic System Architecture',
+      description: 'We transform your raw ideas into viable, production-ready technical blueprints. Before any hardware is built, we define the optimal technology stack and system architecture to ensure project feasibility and long-term scalability.'
     },
     {
       icon: <FiZap size={28} />,
-      title: 'Advanced Firmware',
-      description: 'Firmware development for specialized components like PMIC-UCD3138.',
-      features: ['PMIC firmware', 'Power optimization', 'RTOS implementation', 'Bootloader & OTA']
+      title: 'Firmware Engineering',
+      description: 'We develop robust, optimized firmware that breathes life into your custom hardware. Our focus is on maximizing MCU capabilities for low-power operations and complex, real-time edge processing.'
     },
     {
       icon: <FiLayers size={28} />,
-      title: 'Component Customization',
-      description: 'From sensor to processor selection based on the use case.',
-      features: ['Sensor selection', 'MCU optimization', 'Custom components', 'Use case analysis']
+      title: 'Turnkey System Development',
+      description: 'We execute the complete development lifecycle by seamlessly integrating electronics, board layouts, and firmware. This unified approach ensures all subsystems communicate flawlessly to deliver a fully functional end product.'
+    },
+    {
+      icon: <FiHardDrive size={28} />,
+      title: 'Core Electronics Design',
+      description: 'We translate your high-level architectural blueprints into precise, optimized electronic schematics. Our designs focus on reliable component relationships, intelligent power management, and accurate sensor integration.'
     },
     {
       icon: <FiCheckCircle size={28} />,
-      title: 'Rigorous Testing',
-      description: 'Extensive hardware testing with industry standards for complete production deployment.',
-      features: ['Industry standards', 'Production testing', 'Quality assurance', 'Validation']
-    },
-    {
-      icon: <FiWifi size={28} />,
-      title: 'RF & IoT Connectivity',
-      description: 'Expertise in RF technologies such as Wi-Fi 6 and BLE 5.0 for IoT connected devices.',
-      features: ['Wi-Fi 6', 'BLE 5.0', 'LoRa', 'Mesh networking']
-    },
-    {
-      icon: <FiCpu size={28} />,
-      title: 'Platform Agnostic',
-      description: 'Proficiency in adapting to any chip platform according to the requirement.',
-      features: ['Flexible platforms', 'Custom adaptation', 'Multi-vendor support', 'Scalable solutions']
+      title: 'PCB Layout & Fabrication',
+      description: 'We provide comprehensive board design services to bring your electronic schematics into the physical realm. This supporting capability ensures your custom PCBs are reliable, manufacturable, and ready for rigorous testing.'
     }
   ];
 
@@ -67,14 +50,14 @@ export default function EmbeddedSystems() {
   ];
 
   const capabilities = [
-    'Low-power MCU architecture design',
-    'RF module integration & certification',
-    'Sensor interface & calibration',
-    'Real-time data acquisition',
-    'Secure boot & encrypted firmware',
-    'Platform-agnostic development',
-    'Production testing & validation',
-    'Manufacturing support & scaling'
+    'Idea-to-Architecture Roadmapping',
+    'Zephyr RTOS & Bare-Metal Firmware',
+    'Low-Power MCU Optimization',
+    'RF & IoT Connectivity (BLE, Wi-Fi, Cellular)',
+    'Hardware-Firmware Integration',
+    'Schematic & Multi-layer PCB Design',
+    'Real-Time Data Acquisition & EdgeAI',
+    'Production Validation & Testing'
   ];
 
   const useCases = [
@@ -124,7 +107,7 @@ export default function EmbeddedSystems() {
             What We Do
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Complete embedded systems development from PCB design to firmware deployment
+            From concept to production-ready embedded systems
           </p>
         </motion.div>
 
@@ -142,15 +125,7 @@ export default function EmbeddedSystems() {
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start space-x-3">
-                    <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-700 leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>
