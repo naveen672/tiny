@@ -14,56 +14,65 @@ export default function AIMachineLearning() {
     {
       icon: <FiEye size={28} />,
       title: 'Advanced Computer Vision',
-      description: 'Proficient in building advanced object detection algorithms and deep learning models such as SSD and YOLO.',
-      features: ['SSD models', 'YOLO detection', 'Custom CNN', 'Real-time inference']
+      description: 'We build intelligent vision systems that automatically detect, track, and analyze objects in real time for inspection, monitoring, and automation.',
+      features: [
+        'Real-time object detection & tracking',
+        'Defect detection & quality inspection',
+        'Custom deep learning vision models',
+        'Industrial & surveillance applications'
+      ]
     },
     {
       icon: <FiZap size={28} />,
       title: 'Optimized Model Deployment',
-      description: 'Extensive experience with TinyML, TensorRT, and OpenVINO.',
-      features: ['TinyML', 'TensorRT', 'OpenVINO', 'Model optimization']
+      description: 'We ensure AI models run fast, efficiently, and reliably across devices by optimizing performance and reducing resource usage.',
+      features: [
+        'Model compression & acceleration',
+        'TinyML and edge optimization',
+        'TensorRT & OpenVINO deployment',
+        'Low-latency real-time inference'
+      ]
     },
     {
       icon: <FiCpu size={28} />,
       title: 'Production-Ready Models',
-      description: 'Deploying on cloud and on edge devices like NVIDIA AGX/IGX and Jetson Nano.',
-      features: ['NVIDIA AGX/IGX', 'Jetson Nano', 'Cloud deployment', 'Edge inference']
+      description: 'We develop scalable AI solutions designed for real-world environments, from embedded hardware to enterprise cloud systems.',
+      features: [
+        'Edge devices (Jetson, embedded GPUs)',
+        'Cloud deployment & scaling',
+        'Robust testing & validation',
+        'Continuous monitoring & updates'
+      ]
     },
     {
       icon: <FiActivity size={28} />,
       title: 'Multi-Modal Sensor Expertise',
-      description: 'Working with accelerometers, temperature sensors, microphones and more.',
-      features: ['Accelerometers', 'Temperature sensors', 'Microphones', 'Sensor fusion']
+      description: 'We transform raw sensor signals into actionable intelligence for predictive insights and automated decision-making.',
+      features: [
+        'Vibration, temperature & audio analysis',
+        'Sensor fusion techniques',
+        'Signal processing & feature extraction',
+        'Predictive maintenance solutions'
+      ]
+    }
+  ];
+
+  const additionalServices = [
+    {
+      title: 'Computer Vision Solutions',
+      description: 'We develop advanced computer vision systems that enable machines to interpret, analyze, and act on visual data in real time.'
     },
     {
-      icon: <FiTrendingUp size={28} />,
-      title: 'Advanced Feature Extraction',
-      description: 'Utilizing Spectral Analysis (FFT), Spectrograms, and statistical features.',
-      features: ['FFT analysis', 'Spectrograms', 'Statistical features', 'Time-series']
+      title: 'Sensor Data Processing and Modeling',
+      description: 'We design intelligent pipelines to process sensor data and build accurate models that drive actionable insights.'
     },
     {
-      icon: <FiCpu size={28} />,
-      title: 'ML for MCUs',
-      description: 'Optimizing and deploying models on resource-constrained microcontrollers for edge intelligence.',
-      features: ['TFLite Micro', 'Model compression', 'MCU optimization', 'Edge intelligence']
+      title: 'AI/ML Model Design, Knowledge Engineering & SLM',
+      description: 'We create robust AI/ML models, structured knowledge systems, and specialized language models tailored to your domain needs.'
     },
     {
-      icon: <FiDatabase size={28} />,
-      title: 'Data Ingestion & Processing',
-      description: 'Handling structured and semi-structured data using cloud technologies.',
-      features: ['Cloud data processing', 'ETL pipelines', 'Data transformation', 'Batch processing']
-    },
-    {
-      icon: <FiCloud size={28} />,
-      title: 'Cloud Deployment',
-      description: 'Dockerizing applications and deploying them on GCP and Azure.',
-      features: ['Docker containers', 'GCP deployment', 'Azure deployment', 'CI/CD pipelines']
-    },
-    {
-      icon: <FiServer size={28} />,
-      title: 'Big Data & ETL',
-      description: 'Leveraging PySpark and Apache Airflow for robust data pipelines.',
-      features: ['PySpark', 'Apache Airflow', 'Data pipelines', 'Big data processing']
+      title: 'Cloud Deployment & MLOps',
+      description: 'We implement scalable cloud deployments and streamlined MLOps workflows to ensure reliable, efficient, and production-ready AI solutions.'
     }
   ];
 
@@ -137,9 +146,9 @@ export default function AIMachineLearning() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl flex items-center justify-center text-white mb-8 mx-auto">
+          <div className="w-20 h-20 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-2xl flex items-center justify-center text-white mb-8 mx-auto">
             <FiCpu size={40} />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -172,7 +181,7 @@ export default function AIMachineLearning() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-gray-200 rounded-2xl p-8 card-hover"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -180,7 +189,7 @@ export default function AIMachineLearning() {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <FiCheckCircle className="text-purple-600 flex-shrink-0 mt-1" />
+                    <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -190,8 +199,36 @@ export default function AIMachineLearning() {
         </div>
       </section>
 
+      {/* Additional Services */}
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
+        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our Core Capabilities
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI/ML solutions from vision to cloud deployment
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+          {additionalServices.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 card-hover"
+            >
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p className="text-gray-700 leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Data Pipeline */}
-      <section className="section-container bg-gradient-to-br from-gray-50 to-purple-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Complete ML Pipeline
@@ -212,7 +249,7 @@ export default function AIMachineLearning() {
               className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
             >
               <div className="flex items-start space-x-6">
-                <div className="text-5xl font-bold text-purple-600/20 flex-shrink-0">
+                <div className="text-5xl font-bold text-brand-darkBlue/20 flex-shrink-0">
                   0{index + 1}
                 </div>
                 <div className="flex-1">
@@ -222,7 +259,7 @@ export default function AIMachineLearning() {
                     {stage.tools.map((tool, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-brand-lightBlue/20 text-brand-darkBlue rounded-full text-sm font-medium"
                       >
                         {tool}
                       </span>
@@ -286,7 +323,7 @@ export default function AIMachineLearning() {
                 key={index}
                 className="flex items-center space-x-3 bg-white rounded-lg p-4 border border-gray-200"
               >
-                <FiCpu className="text-purple-600 flex-shrink-0" />
+                <FiCpu className="text-brand-darkBlue flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{capability}</span>
               </div>
             ))}
@@ -295,12 +332,12 @@ export default function AIMachineLearning() {
       </section>
 
       {/* Use Cases */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-purple-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Real-World Deployments
           </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             ML systems delivering measurable business impact
           </p>
         </motion.div>
@@ -316,15 +353,15 @@ export default function AIMachineLearning() {
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-              <p className="text-purple-100 mb-6 leading-relaxed">{useCase.description}</p>
+              <p className="text-white/80 mb-6 leading-relaxed">{useCase.description}</p>
               <div className="grid grid-cols-2 gap-3 mb-6">
                 {useCase.metrics.map((metric, idx) => (
-                  <div key={idx} className="bg-purple-500/20 rounded-lg p-3 border border-purple-400/30">
+                  <div key={idx} className="bg-brand-lightBlue/20 rounded-lg p-3 border border-brand-lightBlue/30">
                     <div className="text-sm font-semibold">{metric}</div>
                   </div>
                 ))}
               </div>
-              <div className="text-sm text-purple-200 font-mono">{useCase.tech}</div>
+              <div className="text-sm text-white/70 font-mono">{useCase.tech}</div>
             </motion.div>
           ))}
         </div>
@@ -344,15 +381,15 @@ export default function AIMachineLearning() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">10x</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">10x</div>
                 <div className="text-gray-700">Faster Inference</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">90%</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">90%</div>
                 <div className="text-gray-700">Size Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">&lt;1%</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">&lt;1%</div>
                 <div className="text-gray-700">Accuracy Loss</div>
               </div>
             </div>
@@ -361,16 +398,16 @@ export default function AIMachineLearning() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-r from-purple-600 to-blue-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Deploy AI at the Edge?
           </h2>
-          <p className="text-xl mb-8 text-purple-50">
+          <p className="text-xl mb-8 text-white/90">
             Let's build intelligent systems that work where you need them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary bg-white text-purple-600 hover:bg-gray-100">
+            <Link to="/contact" className="btn-primary bg-white text-brand-darkBlue hover:bg-gray-100">
               Get in Touch
             </Link>
             <Link to="/case-studies" className="btn-secondary border-2 border-white hover:bg-white/10">
