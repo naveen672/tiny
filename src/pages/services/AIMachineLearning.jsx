@@ -256,7 +256,7 @@ export default function AIMachineLearning() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border border-purple-200 text-center card-hover"
+              className="bg-gradient-to-br from-brand-lightBlue/10 to-brand-lightGrey/20 rounded-xl p-6 border border-brand-lightBlue/30 text-center card-hover"
             >
               <div className="font-bold text-gray-900 mb-1">{platform.name}</div>
               <div className="text-sm text-gray-600">{platform.category}</div>
@@ -266,7 +266,7 @@ export default function AIMachineLearning() {
       </section>
 
       {/* ML Capabilities */}
-      <section className="section-container bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             ML Engineering Capabilities
@@ -336,7 +336,7 @@ export default function AIMachineLearning() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
             Edge AI Optimization
           </h2>
-          <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border border-purple-200">
+          <div className="bg-gradient-to-br from-brand-lightBlue/10 to-brand-lightGrey/20 rounded-2xl p-8 border border-brand-lightBlue/30">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Deploying ML models on edge devices requires careful optimization. We specialize in 
               reducing model size by up to 90% while maintaining accuracy through quantization, 

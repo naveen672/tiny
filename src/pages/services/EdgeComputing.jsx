@@ -185,7 +185,7 @@ export default function EdgeComputing() {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <FiCheckCircle className="text-cyan-600 flex-shrink-0 mt-1" />
+                    <FiCheckCircle className="text-brand-lightBlue flex-shrink-0 mt-1" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -249,7 +249,7 @@ export default function EdgeComputing() {
               className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
             >
               <div className="flex items-start space-x-6">
-                <div className="text-5xl font-bold text-cyan-600/20 flex-shrink-0">
+                <div className="text-5xl font-bold text-brand-lightBlue/20 flex-shrink-0">
                   0{index + 1}
                 </div>
                 <div className="flex-1">
@@ -290,7 +290,7 @@ export default function EdgeComputing() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-200 text-center card-hover"
+              className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-brand-lightBlue/30 text-center card-hover"
             >
               <div className="font-bold text-gray-900 text-lg mb-1">{platform.name}</div>
               <div className="text-sm text-gray-600">{platform.specs}</div>
@@ -323,15 +323,15 @@ export default function EdgeComputing() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">{useCase.title}</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div>
-                  <div className="text-sm font-semibold text-cyan-600 uppercase mb-2">The Challenge</div>
+                  <div className="text-sm font-semibold text-brand-lightBlue uppercase mb-2">The Challenge</div>
                   <p className="text-gray-700 leading-relaxed">{useCase.challenge}</p>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-cyan-600 uppercase mb-2">Strategic Solution</div>
+                  <div className="text-sm font-semibold text-brand-lightBlue uppercase mb-2">Strategic Solution</div>
                   <p className="text-gray-700 leading-relaxed">{useCase.solution}</p>
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-cyan-600 uppercase mb-2">Core Outcomes</div>
+                  <div className="text-sm font-semibold text-brand-lightBlue uppercase mb-2">Core Outcomes</div>
                   <p className="text-gray-700 leading-relaxed">{useCase.outcome}</p>
                 </div>
               </div>
@@ -341,7 +341,7 @@ export default function EdgeComputing() {
                   {useCase.stack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-white border border-cyan-200 text-gray-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-white border border-brand-lightBlue/30 text-gray-800 rounded-full text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -354,7 +354,7 @@ export default function EdgeComputing() {
       </section>
 
       {/* MLOps Section */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
             Enterprise MLOps for Edge
@@ -388,7 +388,7 @@ export default function EdgeComputing() {
             Build secure, offline-first edge AI systems that scale to thousands of devices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary bg-white text-cyan-600 hover:bg-gray-100">
+            <Link to="/contact" className="btn-primary bg-white text-brand-lightBlue hover:bg-gray-100">
               Get Started
             </Link>
             <Link to="/case-studies" className="btn-secondary border-2 border-white hover:bg-white/10">

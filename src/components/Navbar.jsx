@@ -46,14 +46,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
               <span className="text-white font-bold text-lg sm:text-xl">T</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-bold text-base sm:text-lg leading-tight text-gray-900 group-hover:text-blue-600 transition-colors">
+              <span className="font-heading font-bold text-base sm:text-lg leading-tight text-gray-900 group-hover:text-brand-darkBlue transition-colors">
                 Tiny Prism Labs
               </span>
-              <span className="text-xs text-gray-600 leading-tight font-medium group-hover:text-cyan-600 transition-colors hidden sm:block">
+              <span className="text-xs text-gray-600 leading-tight font-medium group-hover:text-brand-lightBlue transition-colors hidden sm:block">
                 Edge Intelligence
               </span>
             </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105">
+                  <button className="flex items-center space-x-1 text-gray-700 hover:text-brand-darkBlue font-medium transition-all duration-300 hover:scale-105">
                     <span>{link.name}</span>
                     <FiChevronDown className="text-sm transition-transform duration-300 group-hover:rotate-180" />
                   </button>
@@ -80,7 +80,7 @@ export default function Navbar() {
                           <Link
                             key={sublink.path}
                             to={sublink.path}
-                            className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 hover:pl-6"
+                            className="block px-4 py-3 text-gray-700 hover:bg-brand-lightGrey/30 hover:text-brand-darkBlue transition-all duration-300 hover:pl-6"
                           >
                             {sublink.name}
                           </Link>
@@ -95,12 +95,12 @@ export default function Navbar() {
                   to={link.path}
                   className={`font-medium transition-all duration-300 hover:scale-105 relative group ${
                     location.pathname === link.path
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-brand-darkBlue'
+                      : 'text-gray-700 hover:text-brand-darkBlue'
                   }`}
                 >
                   {link.name}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
                 </Link>
               )
             )}
@@ -112,7 +112,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-700 hover:text-blue-600"
+            className="lg:hidden text-gray-700 hover:text-brand-darkBlue"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -137,7 +137,7 @@ export default function Navbar() {
                       key={sublink.path}
                       to={sublink.path}
                       onClick={() => setIsOpen(false)}
-                      className="block pl-8 pr-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                      className="block pl-8 pr-4 py-2 text-gray-600 hover:text-brand-darkBlue hover:bg-brand-lightGrey/30"
                     >
                       {sublink.name}
                     </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                  className="block px-4 py-2 text-gray-700 hover:text-brand-darkBlue hover:bg-brand-lightGrey/30"
                 >
                   {link.name}
                 </Link>

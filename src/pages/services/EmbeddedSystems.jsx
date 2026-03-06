@@ -103,9 +103,9 @@ export default function EmbeddedSystems() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl flex items-center justify-center text-white mb-8 mx-auto">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-2xl flex items-center justify-center text-white mb-8 mx-auto">
             <FiCpu size={32} className="sm:w-10 sm:h-10" />
           </div>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -138,7 +138,7 @@ export default function EmbeddedSystems() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-gray-200 rounded-2xl p-8 card-hover"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -146,7 +146,7 @@ export default function EmbeddedSystems() {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
-                    <FiCheckCircle className="text-blue-600 flex-shrink-0 mt-1" />
+                    <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -157,7 +157,7 @@ export default function EmbeddedSystems() {
       </section>
 
       {/* Platforms */}
-      <section className="section-container bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Supported Platforms
@@ -208,9 +208,9 @@ export default function EmbeddedSystems() {
             {capabilities.map((capability, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-4 border border-blue-200"
+                className="flex items-center space-x-3 bg-gradient-to-r from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-lg p-4 border border-brand-lightBlue/30"
               >
-                <FiLayers className="text-blue-600 flex-shrink-0" />
+                <FiLayers className="text-brand-darkBlue flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{capability}</span>
               </div>
             ))}
@@ -219,12 +219,12 @@ export default function EmbeddedSystems() {
       </section>
 
       {/* Use Cases */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Real-World Applications
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Embedded systems powering diverse industries
           </p>
         </motion.div>
@@ -240,12 +240,12 @@ export default function EmbeddedSystems() {
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-              <p className="text-blue-100 mb-6 leading-relaxed">{useCase.description}</p>
+              <p className="text-white/80 mb-6 leading-relaxed">{useCase.description}</p>
               <div className="flex flex-wrap gap-2">
                 {useCase.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-blue-500/20 rounded-full text-sm border border-blue-400/30"
+                    className="px-3 py-1 bg-brand-lightGrey/300/20 rounded-full text-sm border border-brand-lightBlue/30"
                   >
                     {tech}
                   </span>
@@ -298,9 +298,9 @@ export default function EmbeddedSystems() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-start space-x-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200"
+              className="flex items-start space-x-6 bg-gradient-to-r from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-brand-lightBlue/30"
             >
-              <div className="text-5xl font-bold text-blue-600/20 flex-shrink-0">
+              <div className="text-5xl font-bold text-brand-darkBlue/20 flex-shrink-0">
                 {process.step}
               </div>
               <div>
@@ -313,16 +313,16 @@ export default function EmbeddedSystems() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Build Your Embedded System?
           </h2>
-          <p className="text-xl mb-8 text-blue-50">
+          <p className="text-xl mb-8 text-white/90">
             Let's discuss your hardware and firmware requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary bg-white text-blue-600 hover:bg-gray-100">
+            <Link to="/contact" className="btn-primary bg-white text-brand-darkBlue hover:bg-gray-100">
               Get in Touch
             </Link>
             <Link to="/case-studies" className="btn-secondary border-2 border-white hover:bg-white/10">

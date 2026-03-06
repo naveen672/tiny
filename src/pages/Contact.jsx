@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Get in Touch
@@ -66,14 +66,14 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 text-center card-hover"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6 mx-auto">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6 mx-auto">
                 {info.icon}
               </div>
               <h3 className="font-heading text-lg sm:text-xl font-bold text-gray-900 mb-4">{info.title}</h3>
               {info.details.map((detail, idx) => (
                 <p key={idx} className="text-gray-700 mb-1 text-sm sm:text-base">
                   {info.action ? (
-                    <a href={info.action} className="hover:text-blue-600 transition-colors">
+                    <a href={info.action} className="hover:text-brand-darkBlue transition-colors">
                       {detail}
                     </a>
                   ) : (
@@ -87,7 +87,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form */}
-      <section className="section-container bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Form */}
           <motion.div
@@ -209,7 +209,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white font-semibold rounded-lg hover:from-brand-navyBlue hover:to-brand-lightBlue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
               >
                 <span>Send Message</span>
                 <FiSend />
@@ -249,7 +249,7 @@ export default function Contact() {
                   }
                 ].map((step, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold flex-shrink-0">
+                    <div className="w-8 h-8 bg-brand-lightBlue/20 rounded-full flex items-center justify-center text-brand-darkBlue font-bold flex-shrink-0">
                       {index + 1}
                     </div>
                     <div>
@@ -261,7 +261,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">
                 Looking for Support?
               </h3>
@@ -271,7 +271,7 @@ export default function Contact() {
               </p>
               <a
                 href="mailto:support@tinyprismlabs.com"
-                className="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-block px-6 py-3 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Contact Support
               </a>
@@ -323,14 +323,14 @@ export default function Contact() {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{office.city}</h3>
                     {office.isHeadquarters && (
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                      <span className="px-3 py-1 bg-brand-lightBlue/20 text-brand-navyBlue rounded-full text-sm font-semibold">
                         Headquarters
                       </span>
                     )}
                   </div>
                 </div>
                 <p className="text-gray-700 mb-6 flex items-start space-x-2">
-                  <FiMapPin className="mt-1 flex-shrink-0 text-blue-600" />
+                  <FiMapPin className="mt-1 flex-shrink-0 text-brand-darkBlue" />
                   <span>{office.address}</span>
                 </p>
                 
@@ -353,7 +353,7 @@ export default function Contact() {
                   href={office.mapLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors mt-4"
+                  className="inline-flex items-center space-x-2 text-brand-darkBlue hover:text-brand-navyBlue font-semibold transition-colors mt-4"
                 >
                   <FiMapPin className="text-xl" />
                   <span>Open in Google Maps</span>
@@ -366,18 +366,18 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 text-blue-50">
+          <p className="text-xl mb-8 text-white/90">
             Schedule a consultation with our engineering team to discuss your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:info@tinyprismlabs.com"
-              className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
+              className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
             >
               Email Us
             </a>

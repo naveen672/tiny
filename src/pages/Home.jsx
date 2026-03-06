@@ -82,7 +82,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20 overflow-hidden pt-20">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -132,7 +132,7 @@ export default function Home() {
             >
               {differentiators.map((item, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white mb-4">{item.icon}</div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center text-white mb-4">{item.icon}</div>
                   <h3 className="font-heading font-bold text-gray-900 text-base mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
                 </div>
@@ -169,8 +169,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link to={service.link}>
-                <div className="bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 h-full card-hover hover:border-blue-200">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 h-full card-hover hover:border-brand-lightBlue/30">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     {service.icon}
                   </div>
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-4">
@@ -179,7 +179,7 @@ export default function Home() {
                   <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
                     {service.description}
                   </p>
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:text-cyan-500 transition-colors">
+                  <div className="flex items-center text-brand-darkBlue font-semibold group-hover:text-brand-lightBlue transition-colors">
                     Learn More <FiArrowRight className="ml-2 transform group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* Why Tiny Prism Labs */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export default function Home() {
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Why Tiny Prism Labs?
           </h2>
-          <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto px-4">
+          <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto px-4">
             Engineering-first, R&D-driven technology company building intelligent edge systems
           </p>
         </motion.div>
@@ -216,11 +216,11 @@ export default function Home() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-300 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-lightGrey/300/20 rounded-xl flex items-center justify-center text-brand-lightBlue mb-6">
                 {item.icon}
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.title}</h3>
-              <p className="text-blue-100 leading-relaxed text-sm sm:text-base">{item.description}</p>
+              <p className="text-white/80 leading-relaxed text-sm sm:text-base">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -272,14 +272,14 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200"
+              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-gray-200"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">{item.description}</p>
               <ul className="space-y-2">
                 {item.points.map((point, idx) => (
                   <li key={idx} className="flex items-center space-x-3">
-                    <FiCheckCircle className="text-blue-600 flex-shrink-0" />
+                    <FiCheckCircle className="text-brand-darkBlue flex-shrink-0" />
                     <span className="text-gray-700">{point}</span>
                   </li>
                 ))}
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -301,10 +301,10 @@ export default function Home() {
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Ready to Build Intelligent Edge Systems?
           </h2>
-          <p className="text-xl mb-8 text-blue-50">
+          <p className="text-xl mb-8 text-white/90">
             Let's discuss how we can help you deploy production-ready edge AI solutions.
           </p>
-          <Link to="/contact" className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+          <Link to="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
             Schedule a Consultation
           </Link>
         </motion.div>

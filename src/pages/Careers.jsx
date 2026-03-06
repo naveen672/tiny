@@ -99,7 +99,7 @@ export default function Careers() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/30">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Join Our Team
@@ -132,7 +132,7 @@ export default function Careers() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 card-hover"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {benefit.icon}
               </div>
               <h3 className="font-heading text-lg sm:text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -143,12 +143,12 @@ export default function Careers() {
       </section>
 
       {/* Culture & Values */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto px-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">
             Our Engineering Culture
           </h2>
-          <p className="text-lg sm:text-xl text-blue-100 mb-12 text-center leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/80 mb-12 text-center leading-relaxed">
             We're building a culture of excellence, innovation, and continuous learning. 
             Here's what we value:
           </p>
@@ -195,7 +195,7 @@ export default function Careers() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
                   <div className="flex flex-wrap gap-3 text-sm">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">
+                    <span className="px-3 py-1 bg-brand-lightBlue/20 text-brand-navyBlue rounded-full font-medium">
                       {position.type}
                     </span>
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-medium">
@@ -213,7 +213,7 @@ export default function Careers() {
                   {position.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 text-gray-800 rounded-lg text-sm"
+                      className="px-3 py-1 bg-gradient-to-r from-brand-lightGrey/20 to-brand-lightBlue/10 border border-brand-lightBlue/30 text-gray-800 rounded-lg text-sm"
                     >
                       {skill}
                     </span>
@@ -222,7 +222,7 @@ export default function Careers() {
               </div>
               <a
                 href="#apply"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-block px-6 py-3 bg-brand-darkBlue text-white font-medium rounded-lg hover:bg-brand-navyBlue transition-colors"
               >
                 Apply Now
               </a>
@@ -232,7 +232,7 @@ export default function Careers() {
       </section>
 
       {/* Application Form */}
-      <section id="apply" className="section-container bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="apply" className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
             Apply Now
@@ -345,7 +345,7 @@ export default function Careers() {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="w-full px-8 py-4 bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white font-semibold rounded-lg hover:from-brand-navyBlue hover:to-brand-lightBlue transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Submit Application
               </button>
@@ -354,7 +354,7 @@ export default function Careers() {
 
           <p className="mt-6 text-center text-gray-600">
             Or email your resume directly to{' '}
-            <a href="mailto:careers@tinyprismlabs.com" className="text-blue-600 hover:underline font-semibold">
+            <a href="mailto:careers@tinyprismlabs.com" className="text-brand-darkBlue hover:underline font-semibold">
               careers@tinyprismlabs.com
             </a>
           </p>
@@ -362,17 +362,17 @@ export default function Careers() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Don't See Your Role?
           </h2>
-          <p className="text-xl mb-8 text-blue-50">
+          <p className="text-xl mb-8 text-white/90">
             We're always looking for talented engineers. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
             href="mailto:careers@tinyprismlabs.com"
-            className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
+            className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl"
           >
             Contact Us
           </a>

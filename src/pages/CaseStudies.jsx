@@ -160,7 +160,7 @@ export default function CaseStudies() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/30">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Case Studies
@@ -173,23 +173,23 @@ export default function CaseStudies() {
       </section>
 
       {/* Stats Overview */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
           <motion.div {...fadeIn}>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">50+</div>
-            <div className="text-blue-100 text-sm sm:text-base">Projects Delivered</div>
+            <div className="text-white/80 text-sm sm:text-base">Projects Delivered</div>
           </motion.div>
           <motion.div {...fadeIn} transition={{ delay: 0.1 }}>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">15+</div>
-            <div className="text-blue-100 text-sm sm:text-base">Industries Served</div>
+            <div className="text-white/80 text-sm sm:text-base">Industries Served</div>
           </motion.div>
           <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">10K+</div>
-            <div className="text-blue-100 text-sm sm:text-base">Devices Deployed</div>
+            <div className="text-white/80 text-sm sm:text-base">Devices Deployed</div>
           </motion.div>
           <motion.div {...fadeIn} transition={{ delay: 0.3 }}>
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">99.9%</div>
-            <div className="text-blue-100 text-sm sm:text-base">Average Uptime</div>
+            <div className="text-white/80 text-sm sm:text-base">Average Uptime</div>
           </motion.div>
         </div>
       </section>
@@ -218,11 +218,11 @@ export default function CaseStudies() {
               <div className="p-6 sm:p-8 md:p-10">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     {study.icon}
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs sm:text-sm font-semibold text-blue-600 uppercase mb-2">
+                    <div className="text-xs sm:text-sm font-semibold text-brand-darkBlue uppercase mb-2">
                       {study.category}
                     </div>
                     <h3 className="font-heading text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{study.title}</h3>
@@ -243,7 +243,7 @@ export default function CaseStudies() {
                   {/* Solution */}
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      <span className="w-2 h-2 bg-brand-lightGrey/300 rounded-full mr-3"></span>
                       Strategic Solution
                     </h4>
                     <p className="text-gray-700 leading-relaxed">{study.solution}</p>
@@ -267,11 +267,11 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Metrics */}
-                <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 mb-6">
+                <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-xl p-6 mb-6">
                   <div className="grid grid-cols-3 gap-4 text-center">
                     {Object.entries(study.metrics).map(([key, value], idx) => (
                       <div key={idx}>
-                        <div className="text-2xl md:text-3xl font-bold text-blue-600 mb-1">
+                        <div className="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-1">
                           {value}
                         </div>
                         <div className="text-xs md:text-sm text-gray-600 capitalize">
@@ -305,12 +305,12 @@ export default function CaseStudies() {
       </section>
 
       {/* Industry Focus */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Industries We Serve
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Deep expertise across multiple verticals
           </p>
         </motion.div>
@@ -346,7 +346,7 @@ export default function CaseStudies() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
             Our Engineering Approach
           </h2>
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200">
+          <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-brand-lightBlue/30">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Every project begins with a deep understanding of technical constraints, business 
               requirements, and deployment environments. We focus on production-ready solutions 
@@ -371,15 +371,15 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let's Build Your Next Success Story
           </h2>
-          <p className="text-xl mb-8 text-blue-50">
+          <p className="text-xl mb-8 text-white/90">
             Partner with us to deploy production-ready edge AI and embedded systems solutions.
           </p>
-          <a href="/contact" className="inline-block px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+          <a href="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
             Start Your Project
           </a>
         </motion.div>

@@ -109,7 +109,7 @@ export default function About() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Building the Future of <span className="gradient-text">Edge Intelligence</span>
@@ -129,9 +129,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 sm:p-8 border border-blue-200"
+            className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-6 sm:p-8 border border-brand-lightBlue/30"
           >
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-darkBlue rounded-xl flex items-center justify-center text-white mb-6">
               <FiTarget size={28} />
             </div>
             <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
@@ -145,9 +145,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-purple-200"
+            className="bg-gradient-to-br from-brand-lightBlue/10 to-brand-lightGrey/20 rounded-2xl p-6 sm:p-8 border border-brand-lightBlue/30"
           >
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-navyBlue rounded-xl flex items-center justify-center text-white mb-6">
               <FiEye size={28} />
             </div>
             <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
@@ -161,9 +161,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-2xl p-6 sm:p-8 border border-cyan-200"
+            className="bg-gradient-to-br from-brand-lightBlue/10 to-brand-lightGrey/20 rounded-2xl p-6 sm:p-8 border border-brand-lightBlue/30"
           >
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-cyan-600 rounded-xl flex items-center justify-center text-white mb-6">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
               <FiAward size={28} />
             </div>
             <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Goal</h2>
@@ -193,9 +193,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-gray-200 card-hover"
+              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-6 sm:p-8 border border-gray-200 card-hover"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {capability.icon}
               </div>
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-3">
@@ -213,7 +213,7 @@ export default function About() {
       </section>
 
       {/* Data Analytics Capabilities */}
-      <section className="section-container bg-gradient-to-br from-blue-50 to-cyan-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Making Sense of Your Data
@@ -233,7 +233,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 card-hover"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-600 to-brand-darkBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {capability.icon}
               </div>
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-3">
@@ -251,7 +251,7 @@ export default function About() {
       </section>
 
       {/* Stats */}
-      <section className="section-container bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
+      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -263,7 +263,7 @@ export default function About() {
               className="text-center"
             >
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-              <div className="text-blue-100 text-sm sm:text-base md:text-lg">{stat.label}</div>
+              <div className="text-white/80 text-sm sm:text-base md:text-lg">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -290,7 +290,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 card-hover"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
                 {value.icon}
               </div>
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
@@ -301,7 +301,7 @@ export default function About() {
       </section>
 
       {/* Technical Expertise */}
-      <section className="section-container bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Technical Expertise
@@ -324,7 +324,7 @@ export default function About() {
                 key={index}
                 className="flex items-center space-x-3 bg-white rounded-lg p-4 border border-gray-200"
               >
-                <div className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-brand-darkBlue rounded-full flex-shrink-0"></div>
                 <span className="text-gray-800 font-medium">{item}</span>
               </div>
             ))}
@@ -365,12 +365,12 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section-container bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let's Build Something Great Together
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-white/80">
             Partner with us to bring intelligent edge solutions to your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

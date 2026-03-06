@@ -16,11 +16,11 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base;
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-brand-darkBlue to-brand-navyBlue text-white font-semibold rounded-xl hover:from-brand-navyBlue hover:to-brand-deepNavy transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply px-6 sm:px-8 py-3 sm:py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base;
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-brand-deepNavy text-white font-semibold rounded-xl hover:bg-brand-navyBlue transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base;
   }
   
   .section-container {
@@ -28,7 +28,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-darkBlue via-brand-lightBlue to-brand-darkBlue bg-clip-text text-transparent;
   }
   
   .card-hover {
