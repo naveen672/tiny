@@ -31,7 +31,7 @@ export default function Navbar() {
     },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
   ];
 
   return (

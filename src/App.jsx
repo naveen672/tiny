@@ -11,6 +11,7 @@ import AIMachineLearning from './pages/services/AIMachineLearning';
 import EdgeComputing from './pages/services/EdgeComputing';
 import CaseStudies from './pages/CaseStudies';
 import Careers from './pages/Careers';
+import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/services/edge-computing" element={<EdgeComputing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/careers" element={<Careers />} />
+                <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
