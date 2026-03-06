@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/tiny-logo.png"
+                src="/tinylogo.png"
                 alt="Tiny Prism Labs"
                 className="h-10 sm:h-12 w-auto"
               />

@@ -35,7 +35,7 @@ export default function SplashScreen({ onComplete }) {
           className="mb-8"
         >
           <motion.img
-            src="/tiny-logo.png"
+            src="/tinylogo.png"
             alt="Tiny Prism Labs"
             className="w-32 h-32 mx-auto"
             initial={{ scale: 0 }}

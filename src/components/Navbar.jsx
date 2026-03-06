@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="/tiny-logo.png"
+              src="/tinylogo.png"
               alt="Tiny Prism Labs"
               className="h-10 sm:h-12 w-auto transform transition-all duration-300 group-hover:scale-110"
             />
