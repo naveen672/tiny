@@ -45,10 +45,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
-              <span className="text-white font-bold text-lg sm:text-xl">T</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img
+              src="/tiny-logo.png"
+              alt="Tiny Prism Labs"
+              className="h-10 sm:h-12 w-auto transform transition-all duration-300 group-hover:scale-110"
+            />
             <div className="flex flex-col">
               <span className="font-heading font-bold text-base sm:text-lg leading-tight text-gray-900 group-hover:text-brand-darkBlue transition-colors">
                 Tiny Prism Labs

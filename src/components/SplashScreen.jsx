@@ -34,16 +34,14 @@ export default function SplashScreen({ onComplete }) {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center text-white mx-auto shadow-2xl">
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-              className="font-heading font-bold text-5xl"
-            >
-              T
-            </motion.span>
-          </div>
+          <motion.img
+            src="/tiny-logo.png"
+            alt="Tiny Prism Labs"
+            className="w-32 h-32 mx-auto"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+          />
         </motion.div>
 
         {/* Company Name */}

@@ -10,10 +10,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg sm:text-xl">T</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src="/tiny-logo.png"
+                alt="Tiny Prism Labs"
+                className="h-10 sm:h-12 w-auto"
+              />
               <div className="flex flex-col">
                 <span className="font-bold text-base sm:text-lg leading-tight text-white">
                   Tiny Prism Labs
