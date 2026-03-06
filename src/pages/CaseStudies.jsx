@@ -12,32 +12,32 @@ export default function CaseStudies() {
   const caseStudies = [
     {
       icon: <FiActivity size={32} />,
-      title: 'Accelerating Market Adoption for a Next-Generation Testing',
+      title: 'Next-Gen Medical Wearable SoC',
       category: 'Embedded Systems',
-      challenge: 'A new, ultra-low-power SoC for medical wearables faced a significant market adoption barrier.',
-      solution: 'Tiny Prism Labs engineered an end-to-end development ecosystem, creating a market-ready reference wearable, a sophisticated on-chip signal processing pipeline, a flexible firmware SDK, and a comprehensive test suite.',
+      challenge: 'Accelerate market adoption for a new, ultra-low-power medical wearable SoC.',
+      solution: 'Engineered an end-to-end ecosystem including a hardware reference design, on-chip DSP pipeline, firmware SDK, and full test suite.',
       outcomes: [
-        'Reference Design: A complete hardware wearable serving as a viable product blueprint',
-        'Signal Processing: On-chip pipeline ensuring clinical-grade data quality',
-        'Edge AI: Power-optimized model with 98% accuracy for real-time analysis'
+        'Ready-to-use hardware blueprint',
+        'Clinical-grade data quality',
+        '98% accurate edge AI'
       ],
       techStack: ['C', 'Zephyr RTOS', 'CMSIS-DSP', 'Python', 'Streamlit'],
       metrics: {
         accuracy: '98%',
-        type: 'Medical Grade',
+        quality: 'Clinical-Grade',
         deployment: 'Production'
       }
     },
     {
       icon: <FiZap size={32} />,
-      title: 'Power Management for Mission-Critical Systems',
+      title: 'Mission-Critical Power Management',
       category: 'Embedded Systems',
-      challenge: 'Telecom stations and data centers demand uninterrupted power supply without compromising on safety. Extreme conditions such as high power, high current, and high temperatures can lead to failures if not managed properly. To ensure reliability, an application firmware must be designed for a PMIC (Power Management Integrated Circuit) that adheres to PMBus standards and meets product specifications.',
-      solution: 'A PMIC-based module engineered to: 1. Isolate the power stage for safety. 2. Provide protection, communication, and monitoring features. 3. Fully comply with PMBus standards for control and configuration.',
+      challenge: 'Develop PMBus-compliant PMIC firmware to ensure safe, uninterrupted power for telecom/data centers under extreme conditions.',
+      solution: 'Engineered a PMIC module with bare-metal firmware to isolate the power stage, integrate protections, and enable full PMBus communication.',
       outcomes: [
-        'Reliable power management',
-        'Protection features integrated for extreme operating conditions',
-        'PMBus command set implemented for configurability and real-time monitoring'
+        'Reliable power delivery',
+        'Extreme condition protection',
+        'Real-time configurability'
       ],
       techStack: ['Embedded C', 'PMIC (UCD3138)', 'Bare-metal firmware', 'PMBus'],
       metrics: {
@@ -48,52 +48,52 @@ export default function CaseStudies() {
     },
     {
       icon: <FiEye size={32} />,
-      title: 'Intelligent Traffic Analytics at the Edge',
-      category: 'AI',
-      challenge: 'Municipalities and private estates often rely on cloud-based analytics for traffic management, incurring high costs and latency. A more efficient, robust, and affordable solution was needed to provide real-time vehicle analytics directly in the field.',
-      solution: 'We engineered a powerful, self-contained edge device on the NVIDIA Jetson platform. The system performs all computations locally, using a sophisticated AI pipeline for real-time vehicle detection, tracking, and re-identification across multiple cameras.',
+      title: 'Intelligent Edge Traffic Analytics',
+      category: 'Edge AI & Cloud',
+      challenge: 'Replace high-latency, expensive cloud traffic analytics with real-time field processing.',
+      solution: 'Deployed an NVIDIA Jetson-based AI pipeline that performs all vehicle detection and tracking locally.',
       outcomes: [
-        'Instant Response: On-device processing provides real-time analytics with zero cloud latency',
-        'Cost-Effective: Significantly lower total cost of ownership compared to cloud-based subscriptions',
-        'Multi-Camera Tracking: Re-identifies vehicles across different cameras for comprehensive journey analysis'
+        'Zero cloud latency',
+        'Significantly lower TCO',
+        'Seamless multi-camera tracking'
       ],
-      techStack: ['NVIDIA Jetson Nano', 'Python', 'PyTorch', 'TensorRT', 'Custom Real-time Application'],
+      techStack: ['NVIDIA Jetson Nano', 'Python', 'PyTorch', 'TensorRT'],
       metrics: {
         latency: 'Zero Cloud',
-        deployment: 'Multi-Camera',
-        cost: 'Lower TCO'
+        cost: 'Lower TCO',
+        deployment: 'Multi-Camera'
       }
     },
     {
       icon: <FiActivity size={32} />,
-      title: 'Predictive AI for Sustainable Water Management',
-      category: 'AI',
-      challenge: 'A water treatment organization was operating reactively, relying on historical data and manual analysis for resource planning. This approach lacked the ability to anticipate sudden changes in water flow, leading to inefficiencies.',
-      solution: 'We developed a cloud-native AI forecasting engine on Microsoft Azure. The solution leverages advanced time-series models to predict water flow with high accuracy and delivers forecasts via a simple API for seamless integration.',
+      title: 'Predictive Water Management AI',
+      category: 'Edge AI & Cloud',
+      challenge: 'Shift water treatment facilities from reactive manual planning to proactive flow prediction.',
+      solution: 'Developed an Azure-based time-series forecasting engine delivered seamlessly via REST API.',
       outcomes: [
-        'Predictive Forecasting: Enabled proactive, data-driven decision-making for field teams',
-        'Adaptive AI: A continuous learning loop keeps the model accurate and relevant',
-        'Seamless Integration: API-first delivery required zero changes to the client\'s existing dashboards'
+        'Data-driven operational forecasting',
+        'Continuous adaptive learning',
+        'Zero-friction dashboard integration'
       ],
       techStack: ['Python', 'TensorFlow', 'LSTM', 'SARIMAX', 'Microsoft Azure', 'REST API'],
       metrics: {
-        accuracy: 'High',
         platform: 'Azure',
-        integration: 'API-first'
+        integration: 'REST API',
+        learning: 'Adaptive'
       }
     },
     {
       icon: <FiEye size={32} />,
-      title: 'Real-time Face Recognition for Secure Environments',
-      category: 'AI',
-      challenge: 'Standard security solutions often depend on a single deployment model, introducing latency or high costs. A flexible, camera-agnostic solution was needed that could perform fast, reliable recognition locally, or scale with a cloud or on-premises backend.',
-      solution: 'We engineered a highly portable solution deployable on compact edge devices, private servers, or the cloud. The system runs a proprietary, optimized facial recognition engine achieving 90% accuracy and integrates with any IP camera via RTSP streams.',
+      title: 'Flexible Facial Recognition Security',
+      category: 'Edge AI & Cloud',
+      challenge: 'Eliminate latency by deploying a fast, camera-agnostic facial recognition system flexible enough for edge or cloud.',
+      solution: 'Engineered a highly portable, proprietary AI engine that integrates with any existing IP camera via RTSP streams.',
       outcomes: [
-        'Flexible Deployment: Portable design runs on edge, cloud, or on-premises servers',
-        'High-Accuracy AI: Proprietary model delivers 90% accuracy in real time',
-        'Camera Agnostic: Integrates effortlessly with existing IP cameras via RTSP streams'
+        'Edge/server/cloud portability',
+        '90% real-time accuracy',
+        'Effortless camera integration'
       ],
-      techStack: ['NVIDIA Jetson', 'Raspberry Pi 5', 'Python', 'OpenCV', 'Proprietary Engine', 'Custom Application'],
+      techStack: ['NVIDIA Jetson', 'Raspberry Pi 5', 'Python', 'OpenCV'],
       metrics: {
         accuracy: '90%',
         deployment: 'Flexible',
@@ -102,35 +102,34 @@ export default function CaseStudies() {
     },
     {
       icon: <FiTool size={32} />,
-      title: 'Production-Ready Real-Time Bolt Detection for Industry Use',
-      category: 'AI',
-      challenge: 'Manufacturing units produce lakhs of bolts in a single shift. Manually identifying defects or missing bolts during high-speed conveyor belt operations is impractical and error-prone. Quality control teams needed a real-time, automated solution to ensure best accuracy without slowing down production.',
-      solution: 'We developed an edge AI solution that integrates directly with conveyor systems, with flexibility to scale for on-premise or cloud deployment as required by industry workflows. The system leverages a custom object detection algorithm optimized for embedded hardware, enabling continuous inspection of every bolt in real time. It also supports connecting to multiple CCTV cameras for simultaneous monitoring across different production lines.',
+      title: 'High-Speed Bolt Defect Detection',
+      category: 'Edge AI & Cloud',
+      challenge: 'Automate defect detection for lakhs of bolts on high-speed conveyors without bottlenecking production.',
+      solution: 'Integrated a custom Edge AI object detection algorithm with multi-camera CCTV streams directly on the production line.',
       outcomes: [
-        'Automated detection ensures consistent quality across lakhs of bolts',
-        'AI runs directly on-device at the edge, reducing latency',
-        'Supports multiple CCTV streams for monitoring several conveyor belts simultaneously',
-        'Reduces manual inspection time and minimizes production slowdowns'
+        'Automated high-volume inspection',
+        'Zero-latency edge processing',
+        'Scalable multi-line monitoring'
       ],
-      techStack: ['NVIDIA Jetson Nano', 'STM32 series', 'Python', 'C++', 'OpenCV', 'TensorRT', 'Multi-camera'],
+      techStack: ['NVIDIA Jetson Nano', 'STM32', 'Python', 'C++', 'OpenCV', 'TensorRT'],
       metrics: {
         volume: 'Lakhs/shift',
-        latency: 'Real-time',
-        deployment: 'Multi-camera'
+        latency: 'Zero',
+        deployment: 'Multi-Camera'
       }
     },
     {
       icon: <FiShield size={32} />,
-      title: 'Production-Ready Real-Time Helmet & Vest Detection for Workplace Safety',
-      category: 'AI',
-      challenge: 'Ensuring employee safety in industrial environments is a critical responsibility. Traditional manual monitoring through supervisors or periodic checks often fails to detect violations like missing helmets or vests, especially when managing large teams across multiple sites. Companies needed a reliable, real-time, automated solution that ensures compliance without adding overhead to operations.',
-      solution: 'We engineered an AI-driven multi-model system capable of detecting helmets and vests simultaneously through multiple CCTV cameras across the workplace. By combining person detection with protective gear identification, the system automatically classifies each individual as safe (helmet and vest detected) or unsafe (missing safety equipment). The deployment is designed for on-premise and cloud environments, ensuring flexibility to integrate with existing IT infrastructure and security policies.',
+      title: 'Real-Time PPE Workplace Safety',
+      category: 'Edge AI & Cloud',
+      challenge: 'Automate PPE (helmet and vest) compliance monitoring across large industrial sites to ensure real-time safety.',
+      solution: 'Deployed a multi-model AI system over CCTV that instantly classifies safe/unsafe personnel, scalable to edge or cloud.',
       outcomes: [
-        'Real-time alerts',
-        'Scalable monitoring',
-        'Risk reduction & Actionable analytics'
+        'Real-time safety alerts',
+        'Scalable site monitoring',
+        'Actionable risk analytics'
       ],
-      techStack: ['Servers', 'Cloud instances', 'Python', 'C++', 'OpenCV', 'TensorRT', 'Multi-camera', 'Grafana'],
+      techStack: ['Cloud/Servers', 'Python', 'C++', 'OpenCV', 'TensorRT', 'Grafana'],
       metrics: {
         alerts: 'Real-time',
         monitoring: 'Scalable',
@@ -139,16 +138,16 @@ export default function CaseStudies() {
     },
     {
       icon: <FiCpu size={32} />,
-      title: 'Predictive Maintenance for Industrial Machinery',
-      category: 'Industrial IoT & Edge AI',
-      challenge: 'Unexpected machinery failures lead to costly downtime and reactive, inefficient maintenance cycles. Industrial operators required a proactive solution to anticipate equipment wear and tear by analyzing complex sensor data in real time.',
-      solution: 'We engineered a compact, rugged hardware device that mounts directly onto machinery. This device runs a highly efficient CNN and anomaly detection model on a low-power microcontroller to process vibration and temperature data at the source, transmitting inferences wirelessly via BLE.',
+      title: 'Predictive Maintenance for Machinery',
+      category: 'Industrial IoT',
+      challenge: 'Prevent costly industrial machinery downtime through proactive, on-site sensor analysis.',
+      solution: 'Engineered a rugged, low-power MCU device running on-device CNNs to analyze vibration/temperature and transmit BLE alerts.',
       outcomes: [
-        'Reduced Downtime: Proactive alerts enable maintenance before critical failure occurs',
-        'On-Device Intelligence: Real-time processing on a low-power MCU eliminates cloud dependency',
-        'Seamless Integration: Dashboard built on Grafana for easy adoption and integration'
+        'Preventative maintenance alerts',
+        'Zero cloud computing dependency',
+        'Seamless Grafana dashboard integration'
       ],
-      techStack: ['nRF52/54', 'STM32WBA', 'C', 'TensorFlow Lite', 'CMSIS-DSP', 'BLE', 'Grafana'],
+      techStack: ['Low-power MCU', 'CNNs', 'BLE', 'Grafana'],
       metrics: {
         downtime: 'Reduced',
         processing: 'On-device',
