@@ -24,7 +24,7 @@ export default function SplashScreen({ onComplete }) {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white"
     >
       <div className="text-center">
         {/* Animated Logo */}
@@ -50,10 +50,10 @@ export default function SplashScreen({ onComplete }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-white mb-2">
+          <h1 className="font-heading text-3xl md:text-4xl font-bold text-brand-deepNavy mb-2">
             Tiny Prism Labs
           </h1>
-          <p className="text-cyan-300 text-sm font-medium tracking-wider">
+          <p className="text-brand-darkBlue text-sm font-medium tracking-wider">
             INTELLIGENCE ON THE EDGE
           </p>
         </motion.div>
@@ -65,15 +65,15 @@ export default function SplashScreen({ onComplete }) {
           transition={{ delay: 0.6 }}
           className="mt-8 w-64 mx-auto"
         >
-          <div className="h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-1 bg-brand-lightGrey rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+              className="h-full bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue"
               initial={{ width: "0%" }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.3 }}
             />
           </div>
-          <p className="text-gray-400 text-xs mt-2">{progress}%</p>
+          <p className="text-gray-500 text-xs mt-2">{progress}%</p>
         </motion.div>
 
         {/* Pulsing Dots */}
@@ -86,7 +86,7 @@ export default function SplashScreen({ onComplete }) {
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-2 h-2 bg-cyan-400 rounded-full"
+              className="w-2 h-2 bg-brand-lightBlue rounded-full"
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1, 0.5],
