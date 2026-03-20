@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiZap, FiShield, FiLayers, FiCheckCircle, FiServer, FiLock, FiCpu } from 'react-icons/fi';
+import { FiZap, FiShield, FiLayers, FiCheckCircle, FiServer, FiLock, FiCpu, FiEye, FiShoppingCart, FiTool, FiActivity, FiPackage } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 export default function EdgeComputing() {
@@ -10,42 +10,119 @@ export default function EdgeComputing() {
     transition: { duration: 0.6 }
   };
 
-  const services = [
-    {
-      icon: <FiZap size={28} />,
-      title: 'End-to-End Embedded ML Pipelines',
-      description: 'Expertise in the full lifecycle from sensor data collection and preprocessing to on-device predictions.',
-      features: ['Data collection', 'Preprocessing', 'On-device inference', 'Real-time predictions']
-    },
-    {
-      icon: <FiShield size={28} />,
-      title: 'Core Focus',
-      description: 'Our approach emphasizes security, hardware compatibility, and cost-effectiveness in every solution.',
-      features: ['Security first', 'Hardware compatibility', 'Cost-effective', 'Scalable solutions']
-    },
+  const solutions = [
     {
       icon: <FiServer size={28} />,
-      title: 'Low-Power Specialization',
-      description: 'We specialize in deploying optimized ML models on energy-efficient, low-power processors.',
-      features: ['Ultra-low power consumption', 'Extended battery life', 'Power optimization', 'Energy-efficient design']
+      title: 'Distributed Edge Intelligence with Cloud Connectivity',
+      description: 'Deploy intelligent edge nodes that perform local inference and selectively communicate insights to the cloud over cellular networks.',
+      features: [
+        'On-device object classification and filtering',
+        'Event-driven data transmission via 4G/5G',
+        'Bandwidth-efficient communication',
+        'Scalable edge-to-cloud integration'
+      ]
     },
     {
-      icon: <FiLock size={28} />,
-      title: 'Fully Offline Operation',
-      description: 'Our solutions ensure reliable performance with no dependency on internet connectivity.',
-      features: ['100% offline', 'No cloud needed', 'Data privacy', 'Reliable operation']
+      icon: <FiEye size={28} />,
+      title: 'Intelligent Traffic Monitoring & Re-Identification',
+      description: 'Enable real-time traffic insights and vehicle/person re-identification using high-performance edge platforms for smart city and surveillance applications.',
+      features: [
+        'Real-time detection and tracking on edge devices',
+        'Re-identification across multiple camera feeds',
+        'Optimized deployment on NVIDIA Jetson platforms',
+        'Scalable for urban and industrial environments'
+      ]
+    },
+    {
+      icon: <FiShoppingCart size={28} />,
+      title: 'Smart Retail Checkout Systems',
+      description: 'Deliver frictionless retail experiences using ultra-low-power edge devices that automate product detection and billing.',
+      features: [
+        'On-device object recognition and classification',
+        'Microcontroller-based deployment (ESP-class devices)',
+        'Low-latency, real-time checkout processing',
+        'Cost-effective and scalable retail solutions'
+      ]
+    },
+    {
+      icon: <FiTool size={28} />,
+      title: 'Edge-Based Quality Inspection (QC Automation)',
+      description: 'Perform real-time defect detection directly on production lines using compact and efficient edge hardware.',
+      features: [
+        'Vision-based inspection on embedded systems',
+        'Inline quality control with minimal latency',
+        'Reduced dependency on centralized infrastructure',
+        'Continuous performance optimization'
+      ]
+    }
+  ];
+
+  const services = [
+    {
+      icon: <FiActivity size={28} />,
+      title: 'End-to-End Edge AI Lifecycle',
+      description: 'Full-stack expertise from data acquisition to deployment and monitoring of on-device intelligence.',
+      features: [
+        'Sensor data collection and preprocessing',
+        'Model optimization for edge inference',
+        'Real-time, on-device predictions',
+        'Continuous performance tuning'
+      ]
     },
     {
       icon: <FiCpu size={28} />,
-      title: 'Advanced Edge Platforms',
-      description: 'We build solutions on advanced edge computing systems, enabling scalable and secure AI deployment.',
-      features: ['Scalable architecture', 'Secure AI deployment', 'Industrial-grade reliability', 'Production ready']
+      title: 'Hardware-Aware AI Engineering',
+      description: 'We design solutions tailored to specific edge hardware, ensuring optimal performance and reliability.',
+      features: [
+        'NVIDIA Jetson, embedded GPUs, and microcontrollers',
+        'Cross-platform compatibility',
+        'Performance and memory optimization',
+        'Industrial-grade system integration'
+      ]
+    },
+    {
+      icon: <FiZap size={28} />,
+      title: 'Low-Power & Energy-Efficient AI',
+      description: 'Specialized in deploying AI on resource-constrained devices with strict power budgets.',
+      features: [
+        'Ultra-low power model optimization',
+        'Battery-powered system design',
+        'Efficient compute utilization',
+        'Long-duration autonomous operation'
+      ]
+    },
+    {
+      icon: <FiLock size={28} />,
+      title: 'Offline-First Intelligent Systems',
+      description: 'Ensure uninterrupted operation in environments with limited or no connectivity.',
+      features: [
+        'Fully offline inference capabilities',
+        'No dependency on cloud infrastructure',
+        'Enhanced data privacy and security',
+        'Reliable operation in remote conditions'
+      ]
+    },
+    {
+      icon: <FiShield size={28} />,
+      title: 'Secure & Scalable Edge Architecture',
+      description: 'Build robust, secure, and scalable edge systems for enterprise deployments.',
+      features: [
+        'Secure device-to-cloud communication',
+        'Scalable edge fleet management',
+        'Production-ready system architecture',
+        'Industrial deployment standards'
+      ]
     },
     {
       icon: <FiLayers size={28} />,
-      title: 'MLOps Pipelines',
-      description: 'Building automated model deployment and monitoring pipelines for edge infrastructure.',
-      features: ['Automated deployment', 'Continuous monitoring', 'Model versioning', 'Streamlined operations']
+      title: 'Edge MLOps & Lifecycle Management',
+      description: 'Streamline deployment, monitoring, and updates of AI models across distributed edge environments.',
+      features: [
+        'Automated model deployment pipelines',
+        'Remote monitoring and diagnostics',
+        'Model versioning and updates',
+        'Continuous improvement workflows'
+      ]
     }
   ];
 
@@ -139,18 +216,57 @@ export default function EdgeComputing() {
         </motion.div>
       </section>
 
-      {/* Core Services */}
+      {/* Edge AI Solutions */}
       <section className="section-container">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Complete Edge AI Stack
+            Edge AI Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From hardware to MLOps, we build end-to-end edge computing solutions
+            Production-ready intelligent systems deployed at the edge
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white border border-gray-200 rounded-2xl p-8 card-hover"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
+                {solution.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+              <p className="text-gray-700 mb-6 leading-relaxed">{solution.description}</p>
+              <ul className="space-y-2">
+                {solution.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start space-x-3">
+                    <FiCheckCircle className="text-brand-lightBlue flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Core Services */}
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
+        <motion.div {...fadeIn} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Core Capabilities
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            End-to-end expertise in edge AI engineering and deployment
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
