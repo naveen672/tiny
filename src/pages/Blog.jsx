@@ -21,7 +21,7 @@ export default function Blog() {
     {
       title: 'Edge AI: Vision-Based Bolt Detection on NVIDIA Jetson Nano',
       platform: 'Hackster.io',
-      url: 'https://www.hackster.io/tiny-prism-labs/edge-ai-vision-based-bolt-detection-on-nvidia-jetson-nano-a5e2c0',
+      url: 'https://www.hackster.io/tiny-prism-labs/edge-ai-vision-based-bolt-detection-on-nvidia-jetson-nano-abb49f',
       description: 'Production-ready real-time bolt detection system for high-speed manufacturing lines using computer vision.',
       tags: ['Computer Vision', 'NVIDIA Jetson', 'Manufacturing']
     },
