@@ -84,26 +84,34 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FiMail className="text-blue-400 mt-1 flex-shrink-0" />
-                <div>
-                  <a href="mailto:info@tinyprismlabs.com" className="text-sm hover:text-blue-400 transition-colors">
-                    info@tinyprismlabs.com
+                <div className="space-y-1">
+                  <a href="mailto:mahesh@tinyprismlabs.com" className="text-sm hover:text-blue-400 transition-colors block">
+                    mahesh@tinyprismlabs.com
+                  </a>
+                  <a href="mailto:ajkj@tinyprismlabs.com" className="text-sm hover:text-blue-400 transition-colors block">
+                    ajkj@tinyprismlabs.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <FiPhone className="text-blue-400 mt-1 flex-shrink-0" />
-                <div>
-                  <a href="tel:+911234567890" className="text-sm hover:text-blue-400 transition-colors">
-                    +91 123 456 7890
+                <div className="space-y-1">
+                  <a href="tel:+918553213634" className="text-sm hover:text-blue-400 transition-colors block">
+                    +91 8553213634
+                  </a>
+                  <a href="tel:+918123577974" className="text-sm hover:text-blue-400 transition-colors block">
+                    +91 8123577974
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <FiMapPin className="text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm">
-                    Bangalore, Karnataka, India
-                  </p>
+                  <a href="https://maps.app.goo.gl/poY5KheBExA14ucL6" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-400 transition-colors">
+                    Manipal-Gok Bio incubator 1st Floor,<br />
+                    Advanced Research Center,<br />
+                    Manipal, Karnataka - 576104, India
+                  </a>
                 </div>
               </li>
             </ul>
