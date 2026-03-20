@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiExternalLink, FiFileText, FiBookOpen } from 'react-icons/fi';
 
 export default function Blog() {
@@ -261,12 +262,12 @@ export default function Blog() {
           <p className="text-xl mb-8 text-white/90">
             We're always excited to share our knowledge and collaborate on innovative projects.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
           >
             Get in Touch
-          </a>
+          </Link>
         </motion.div>
       </section>
     </div>

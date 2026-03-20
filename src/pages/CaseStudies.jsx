@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiCpu, FiZap, FiShield, FiEye, FiActivity, FiTool } from 'react-icons/fi';
 
 export default function CaseStudies() {
@@ -378,9 +379,9 @@ export default function CaseStudies() {
           <p className="text-xl mb-8 text-white/90">
             Partner with us to deploy production-ready edge AI and embedded systems solutions.
           </p>
-          <a href="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+          <Link to="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
             Start Your Project
-          </a>
+          </Link>
         </motion.div>
       </section>
     </div>

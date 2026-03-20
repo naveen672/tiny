@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiTarget, FiEye, FiAward, FiUsers, FiTrendingUp, FiCpu, FiHardDrive, FiZap, FiDatabase, FiBarChart2, FiLayers, FiTool } from 'react-icons/fi';
 
 export default function About() {
@@ -374,12 +375,12 @@ export default function About() {
             Partner with us to bring intelligent edge solutions to your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="btn-primary">
+            <Link to="/contact" className="btn-primary">
               Get in Touch
-            </a>
-            <a href="/case-studies" className="btn-secondary">
+            </Link>
+            <Link to="/case-studies" className="btn-secondary">
               View Our Work
-            </a>
+            </Link>
           </div>
         </motion.div>
       </section>
