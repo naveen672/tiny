@@ -225,7 +225,7 @@ export default function CaseStudies() {
                     <div className="text-xs sm:text-sm font-semibold text-brand-darkBlue uppercase mb-2">
                       {study.category}
                     </div>
-                    <h3 className="font-heading text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{study.title}</h3>
+                    <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">{study.title}</h3>
                   </div>
                 </div>
 
@@ -233,25 +233,25 @@ export default function CaseStudies() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
                   {/* Challenge */}
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 flex items-center">
                       <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                       The Challenge
                     </h4>
-                    <p className="text-gray-700 leading-relaxed">{study.challenge}</p>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{study.challenge}</p>
                   </div>
 
                   {/* Solution */}
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 flex items-center">
                       <span className="w-2 h-2 bg-brand-lightGrey/300 rounded-full mr-3"></span>
                       Strategic Solution
                     </h4>
-                    <p className="text-gray-700 leading-relaxed">{study.solution}</p>
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{study.solution}</p>
                   </div>
 
                   {/* Outcomes */}
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-3 flex items-center">
                       <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                       Core Outcomes
                     </h4>
@@ -267,14 +267,14 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Metrics */}
-                <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-xl p-6 mb-6">
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-xl p-4 sm:p-6 mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-center">
                     {Object.entries(study.metrics).map(([key, value], idx) => (
-                      <div key={idx}>
-                        <div className="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-1">
+                      <div key={idx} className="py-2 sm:py-0">
+                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-darkBlue mb-1">
                           {value}
                         </div>
-                        <div className="text-xs md:text-sm text-gray-600 capitalize">
+                        <div className="text-xs sm:text-sm text-gray-600 capitalize">
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>
                       </div>
@@ -284,14 +284,14 @@ export default function CaseStudies() {
 
                 {/* Technology Stack */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-600 uppercase mb-3">
+                  <h4 className="text-xs sm:text-sm font-semibold text-gray-600 uppercase mb-3">
                     Technology Stack
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {study.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-4 py-2 bg-white border border-gray-300 text-gray-800 rounded-lg text-sm font-medium"
+                        className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white border border-gray-300 text-gray-800 rounded-lg text-xs sm:text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -306,16 +306,16 @@ export default function CaseStudies() {
 
       {/* Industry Focus */}
       <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
-        <motion.div {...fadeIn} className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <motion.div {...fadeIn} className="text-center mb-8 sm:mb-12 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Industries We Serve
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto">
             Deep expertise across multiple verticals
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {[
             'Healthcare',
             'Manufacturing',
@@ -332,9 +332,9 @@ export default function CaseStudies() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-center"
             >
-              <div className="font-semibold text-lg">{industry}</div>
+              <div className="font-semibold text-sm sm:text-base md:text-lg">{industry}</div>
             </motion.div>
           ))}
         </div>
@@ -342,28 +342,28 @@ export default function CaseStudies() {
 
       {/* Approach */}
       <section className="section-container">
-        <motion.div {...fadeIn} className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+        <motion.div {...fadeIn} className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
             Our Engineering Approach
           </h2>
-          <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-brand-lightBlue/30">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+          <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-6 sm:p-8 border border-brand-lightBlue/30">
+            <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
               Every project begins with a deep understanding of technical constraints, business 
               requirements, and deployment environments. We focus on production-ready solutions 
               that are reliable, maintainable, and scalable.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <h3 className="font-bold text-gray-900 mb-2">Engineering with Precision</h3>
-                <p className="text-gray-700 text-sm">Rigorous testing, validation, and optimization at every stage.</p>
+                <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">Engineering with Precision</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Rigorous testing, validation, and optimization at every stage.</p>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-2">Real-World Focus</h3>
-                <p className="text-gray-700 text-sm">Solutions designed for actual deployment conditions and constraints.</p>
+                <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">Real-World Focus</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Solutions designed for actual deployment conditions and constraints.</p>
               </div>
-              <div>
-                <h3 className="font-bold text-gray-900 mb-2">Long-Term Partnership</h3>
-                <p className="text-gray-700 text-sm">Ongoing support and continuous improvement post-deployment.</p>
+              <div className="sm:col-span-2 md:col-span-1">
+                <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-2">Long-Term Partnership</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Ongoing support and continuous improvement post-deployment.</p>
               </div>
             </div>
           </div>
@@ -372,14 +372,14 @@ export default function CaseStudies() {
 
       {/* CTA */}
       <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
-        <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <motion.div {...fadeIn} className="text-center max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's Build Your Next Success Story
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-white/90">
             Partner with us to deploy production-ready edge AI and embedded systems solutions.
           </p>
-          <Link to="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
+          <Link to="/contact" className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl text-sm sm:text-base">
             Start Your Project
           </Link>
         </motion.div>
