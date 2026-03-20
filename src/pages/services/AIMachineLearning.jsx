@@ -13,66 +13,85 @@ export default function AIMachineLearning() {
   const services = [
     {
       icon: <FiEye size={28} />,
-      title: 'Advanced Computer Vision',
-      description: 'We build intelligent vision systems that automatically detect, track, and analyze objects in real time for inspection, monitoring, and automation.',
+      title: 'Intelligent Safety & PPE Compliance Monitoring',
+      description: 'Enhance workplace safety with automated monitoring systems that detect, track, and alert on PPE violations and unsafe conditions in real time - enabling proactive risk mitigation and regulatory compliance.',
       features: [
-        'Real-time object detection & tracking',
-        'Defect detection & quality inspection',
-        'Custom deep learning vision models',
-        'Industrial & surveillance applications'
+        'Real-time PPE detection and violation alerts',
+        'Worker tracking across large operational areas',
+        'Event-based notifications (SMS/Email integration)',
+        'Historical incident logging and audit trails'
       ]
     },
     {
       icon: <FiZap size={28} />,
-      title: 'Optimized Model Deployment',
-      description: 'We ensure AI models run fast, efficiently, and reliably across devices by optimizing performance and reducing resource usage.',
+      title: 'Automated Defect Detection for Quality Control',
+      description: 'Improve manufacturing quality and consistency with vision-based inspection systems that identify defects during production—reducing manual effort and minimizing downstream losses.',
       features: [
-        'Model compression & acceleration',
-        'TinyML and edge optimization',
-        'TensorRT & OpenVINO deployment',
-        'Low-latency real-time inference'
+        'Inline defect detection during manufacturing stages',
+        'High-accuracy visual inspection models',
+        'Integration with existing QC workflows',
+        'Continuous learning for evolving defect patterns'
       ]
     },
     {
-      icon: <FiCpu size={28} />,
-      title: 'Production-Ready Models',
-      description: 'We develop scalable AI solutions designed for real-world environments, from embedded hardware to enterprise cloud systems.',
+      icon: <FiDatabase size={28} />,
+      title: 'Analytics Chatbot for Operational Insights',
+      description: 'Enable intuitive access to complex datasets through AI-powered conversational interfaces—allowing stakeholders to query and analyze data without technical expertise.',
       features: [
-        'Edge devices (Jetson, embedded GPUs)',
-        'Cloud deployment & scaling',
-        'Robust testing & validation',
-        'Continuous monitoring & updates'
+        'Natural language querying over enterprise data',
+        'Context-aware insights from structured and unstructured sources',
+        'Integration with production and sensor datasets',
+        'Decision support through interactive responses and visualizations'
+      ]
+    },
+    {
+      icon: <FiTrendingUp size={28} />,
+      title: 'Production Data Intelligence & Decision Systems',
+      description: 'Unlock the full value of large-scale production data by transforming raw information into actionable insights for strategic and operational decision-making.',
+      features: [
+        'Processing and analysis of high-volume industrial data',
+        'Trend analysis and performance optimization',
+        'Custom dashboards and intelligent reporting',
+        'Data-driven decision frameworks for operations teams'
       ]
     },
     {
       icon: <FiActivity size={28} />,
-      title: 'Multi-Modal Sensor Expertise',
-      description: 'We transform raw sensor signals into actionable intelligence for predictive insights and automated decision-making.',
+      title: 'Predictive Maintenance & Equipment Intelligence',
+      description: 'Prevent unexpected downtime and extend asset life through advanced sensor analytics that detect early signs of equipment failure.',
       features: [
-        'Vibration, temperature & audio analysis',
-        'Sensor fusion techniques',
-        'Signal processing & feature extraction',
-        'Predictive maintenance solutions'
+        'Vibration, temperature, and audio-based diagnostics',
+        'Failure prediction and anomaly detection',
+        'Maintenance scheduling optimization',
+        'Asset performance monitoring dashboards'
       ]
     }
   ];
 
   const additionalServices = [
     {
-      title: 'Computer Vision Solutions',
-      description: 'We develop advanced computer vision systems that enable machines to interpret, analyze, and act on visual data in real time.'
+      title: 'Data Analytics & Intelligence',
+      description: 'Transforming raw data into actionable insights for informed decision-making and operational optimization.'
     },
     {
-      title: 'Sensor Data Processing and Modeling',
-      description: 'We design intelligent pipelines to process sensor data and build accurate models that drive actionable insights.'
+      title: 'Data Engineering & Scalable Pipelines',
+      description: 'Designing scalable data pipelines and architectures for efficient data ingestion, processing, and management.'
     },
     {
-      title: 'AI/ML Model Design, Knowledge Engineering & SLM',
-      description: 'We create robust AI/ML models, structured knowledge systems, and specialized language models tailored to your domain needs.'
+      title: 'Advanced Data Modeling & Machine Learning',
+      description: 'Building robust statistical and machine learning models to uncover patterns, predict outcomes, and drive business value.'
     },
     {
-      title: 'Cloud Deployment & MLOps',
-      description: 'We implement scalable cloud deployments and streamlined MLOps workflows to ensure reliable, efficient, and production-ready AI solutions.'
+      title: 'ML Model Deployment & Performance Optimization',
+      description: 'Deploying high-performance ML models across environments with a focus on scalability, efficiency, and reliability.'
+    },
+    {
+      title: 'End-to-End ML System Design (Cloud)',
+      description: 'Architecting and deploying scalable, cloud-native AI systems with integrated MLOps for continuous delivery and monitoring.'
+    },
+    {
+      title: 'End-to-End ML System Design (On-Premise / Edge)',
+      description: 'Designing secure, high-performance AI systems for on-premise and edge environments with full control over data and infrastructure.'
     }
   ];
 
@@ -164,14 +183,14 @@ export default function AIMachineLearning() {
       <section className="section-container">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            ML Solutions We Build
+            AI/ML Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            End-to-end machine learning from model development to production deployment
+            Video Analytics & Data Intelligence for Industrial Operations
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -210,7 +229,7 @@ export default function AIMachineLearning() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {additionalServices.map((service, index) => (
             <motion.div
               key={index}
