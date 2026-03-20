@@ -61,24 +61,6 @@ export default function Home() {
     }
   ];
 
-  const whyUs = [
-    {
-      icon: <FiTarget size={28} />,
-      title: 'Engineering with Precision',
-      description: 'Every solution is crafted with deep technical rigor, optimizing performance, power efficiency, and reliability from hardware to AI models.'
-    },
-    {
-      icon: <FiShield size={28} />,
-      title: 'Trust by Design',
-      description: 'Security, privacy, and reliability are embedded into everything we build—because intelligence should be safe, dependable, and controlled at the edge.'
-    },
-    {
-      icon: <FiTrendingUp size={28} />,
-      title: 'Impact That Scales',
-      description: 'We focus on building technologies that move beyond prototypes—deployable, scalable solutions that deliver real-world impact across industries.'
-    }
-  ];
-
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -142,8 +124,195 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Services */}
+      {/* Who We Are */}
       <section className="section-container bg-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto"
+        >
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+            Who We Are
+          </h2>
+          <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 sm:p-10 border border-brand-lightBlue/30">
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+              Tiny Prism Labs is a technology services company focused on the intersection of embedded systems and artificial intelligence. The goal is to build smart, efficient, and reliable tech solutions for businesses.
+            </p>
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
+              Rather than selling one-size-fits-all tools, the company works closely with each client to build technology that fits their specific world, from the hardware level all the way up to intelligent software.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* What We Do */}
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            What We Do
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            Most tech companies choose between building hardware or software, but Tiny Prism Labs does both to ensure they work together perfectly.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Embedded Systems Design */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
+              <FiCpu size={32} />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Embedded Systems Design</h3>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              This is the foundational layer of any smart device—the firmware, architecture, and electronics. Every design follows four key principles:
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-3">
+                <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" size={20} />
+                <div>
+                  <span className="font-semibold text-gray-900">Firmware-driven design:</span>
+                  <span className="text-gray-700"> Hardware and software are planned together from day one.</span>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" size={20} />
+                <div>
+                  <span className="font-semibold text-gray-900">High accuracy:</span>
+                  <span className="text-gray-700"> Precision is prioritized because "close enough" isn't an option.</span>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" size={20} />
+                <div>
+                  <span className="font-semibold text-gray-900">High reliability:</span>
+                  <span className="text-gray-700"> Devices are built to keep working in tough conditions without constant maintenance.</span>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <FiCheckCircle className="text-brand-darkBlue flex-shrink-0 mt-1" size={20} />
+                <div>
+                  <span className="font-semibold text-gray-900">Low power consumption:</span>
+                  <span className="text-gray-700"> Systems are optimized for IoT and edge devices running on batteries.</span>
+                </div>
+              </li>
+            </ul>
+            <Link to="/services/embedded-systems" className="inline-flex items-center mt-6 text-brand-darkBlue font-semibold hover:text-brand-lightBlue transition-colors">
+              Learn More <FiArrowRight className="ml-2" />
+            </Link>
+          </motion.div>
+
+          {/* Hardware-Aware AI Design */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
+          >
+            <div className="w-16 h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
+              <FiZap size={32} />
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Hardware-Aware AI Design</h3>
+            <p className="text-gray-700 mb-6 leading-relaxed">
+              On top of the hardware, intelligence is added. The company develops AI-powered software that allows devices to see, understand, and make decisions, turning standard equipment into smart systems.
+            </p>
+            <div className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-xl p-6 mb-6">
+              <p className="text-gray-700 leading-relaxed">
+                AI models are optimized specifically for the hardware they run on, ensuring maximum performance, minimal power consumption, and real-time decision-making capabilities—all without relying on cloud connectivity.
+              </p>
+            </div>
+            <Link to="/services/ai-machine-learning" className="inline-flex items-center text-brand-darkBlue font-semibold hover:text-brand-lightBlue transition-colors">
+              Learn More <FiArrowRight className="ml-2" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How We Deploy */}
+      <section className="section-container bg-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            How We Deploy
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            Flexibility is a major differentiator. Solutions can run in three different environments depending on a client's needs.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: <FiCpu size={28} />,
+              title: 'Cloud',
+              description: 'For scale and remote access.',
+              details: 'Deploy AI models on cloud infrastructure for applications requiring massive scalability, global access, and centralized management.'
+            },
+            {
+              icon: <FiShield size={28} />,
+              title: 'On-Premise',
+              description: 'For data privacy and local control.',
+              details: 'Keep everything in-house with secure on-premise deployments that give you complete control over your data and infrastructure.'
+            },
+            {
+              icon: <FiZap size={28} />,
+              title: 'Edge AI',
+              description: 'For real-time decisions directly on the device with no internet needed.',
+              details: 'Run AI inference locally on devices for instant response times, offline operation, and enhanced privacy—no cloud dependency required.'
+            }
+          ].map((deployment, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-gray-200 card-hover"
+            >
+              <div className="w-14 h-14 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
+                {deployment.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">{deployment.title}</h3>
+              <p className="text-brand-darkBlue font-semibold mb-4">{deployment.description}</p>
+              <p className="text-gray-700 leading-relaxed text-sm">{deployment.details}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 text-center"
+        >
+          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            Whether it's a factory floor needing local AI or a healthcare provider requiring a secure server, the technology adapts to the requirement.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Core Services */}
+      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -189,7 +358,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Tiny Prism Labs */}
+      {/* Our Approach */}
       <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -199,93 +368,63 @@ export default function Home() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Why Tiny Prism Labs?
+            Our Approach
           </h2>
           <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto px-4">
-            Engineering-first, R&D-driven technology company building intelligent edge systems
+            Building like product makers, thinking like engineers
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {whyUs.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20"
-            >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-lightGrey/300/20 rounded-xl flex items-center justify-center text-brand-lightBlue mb-6">
-                {item.icon}
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.title}</h3>
-              <p className="text-white/80 leading-relaxed text-sm sm:text-base">{item.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 border border-white/20 mb-8"
+          >
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-6">
+              The team at Tiny Prism Labs thinks like product builders. When taking on a project, the focus is on whether the end result is something people would actually want to use or buy.
+            </p>
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+              This mindset puts user experience and reliability at the forefront, rather than just technical specifications. Even as a small, focused team, the work is built to scale. The process involves breaking a problem down into every necessary layer—silicon, firmware, data, and intelligence—to solve it properly.
+            </p>
+          </motion.div>
 
-      {/* Key Differentiators - Detailed */}
-      <section className="section-container bg-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Built for Real-World Deployment
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Our solutions are engineered for production environments
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
-            {
-              title: 'Fully Offline AI',
-              description: 'Complete AI inference on-device with zero cloud dependency. Ideal for secure environments, remote locations, and privacy-critical applications.',
-              points: ['No internet required', 'Complete data privacy', 'Works in remote locations', 'Secure by design']
-            },
-            {
-              title: 'Low-Power MCU Optimization',
-              description: 'Optimized for battery-powered and energy-constrained devices. Months to years of operation on a single charge.',
-              points: ['Ultra-low power consumption', 'Battery-optimized', 'PMIC integration', 'Extended deployment life']
-            },
-            {
-              title: 'Production-Ready Solutions',
-              description: 'Battle-tested in real deployments. From proof-of-concept to thousands of devices in production.',
-              points: ['Proven reliability', 'Scalable architecture', 'Field-tested', 'Enterprise-grade']
-            },
-            {
-              title: 'End-to-End MLOps',
-              description: 'Complete pipeline from data ingestion to model deployment, monitoring, and updates at scale.',
-              points: ['Automated pipelines', 'Model monitoring', 'OTA updates', 'Version control']
-            }
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-gray-200"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">{item.description}</p>
-              <ul className="space-y-2">
-                {item.points.map((point, idx) => (
-                  <li key={idx} className="flex items-center space-x-3">
-                    <FiCheckCircle className="text-brand-darkBlue flex-shrink-0" />
-                    <span className="text-gray-700">{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: <FiTarget size={28} />,
+                title: 'User-Centric Design',
+                description: 'Building technology that people actually want to use, not just what\'s technically possible.'
+              },
+              {
+                icon: <FiShield size={28} />,
+                title: 'Built to Scale',
+                description: 'Solutions engineered for growth, from prototype to thousands of production units.'
+              },
+              {
+                icon: <FiTrendingUp size={28} />,
+                title: 'Full-Stack Depth',
+                description: 'From silicon to intelligence—solving problems at every layer of the technology stack.'
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20"
+              >
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-lightBlue/20 rounded-xl flex items-center justify-center text-brand-lightBlue mb-6">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-white/80 leading-relaxed text-sm sm:text-base">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -299,13 +438,16 @@ export default function Home() {
           className="text-center max-w-4xl mx-auto"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-            Ready to Build Intelligent Edge Systems?
+            Let's Build Something Great Together
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Let's discuss how we can help you deploy production-ready edge AI solutions.
+          <p className="text-xl mb-6 text-white/90 leading-relaxed">
+            Tiny Prism Labs builds smart technology from the ground up, combining hardware and AI to help companies create systems that are more capable and intelligent than what they could build alone.
+          </p>
+          <p className="text-lg mb-8 text-white/80">
+            If you have a device to build, a process to automate, or a problem that needs both hardware and software to solve — we are the team to call.
           </p>
           <Link to="/contact" className="inline-block px-8 py-4 bg-white text-brand-darkBlue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl">
-            Schedule a Consultation
+            Get in Touch
           </Link>
         </motion.div>
       </section>
