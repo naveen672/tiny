@@ -426,10 +426,10 @@ export default function AIMachineLearning() {
             Let's build intelligent systems that work where you need them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary bg-white text-brand-darkBlue hover:bg-gray-100">
+            <Link to="/contact" className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-darkBlue font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base text-center">
               Get in Touch
             </Link>
-            <Link to="/case-studies" className="btn-secondary border-2 border-white hover:bg-white/10">
+            <Link to="/case-studies" className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-brand-darkBlue transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base text-center">
               View Case Studies
             </Link>
           </div>
