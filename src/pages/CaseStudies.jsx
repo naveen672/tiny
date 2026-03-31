@@ -172,28 +172,6 @@ export default function CaseStudies() {
         </motion.div>
       </section>
 
-      {/* Stats Overview */}
-      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-          <motion.div {...fadeIn}>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">50+</div>
-            <div className="text-white/80 text-sm sm:text-base">Projects Delivered</div>
-          </motion.div>
-          <motion.div {...fadeIn} transition={{ delay: 0.1 }}>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">15+</div>
-            <div className="text-white/80 text-sm sm:text-base">Industries Served</div>
-          </motion.div>
-          <motion.div {...fadeIn} transition={{ delay: 0.2 }}>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">10K+</div>
-            <div className="text-white/80 text-sm sm:text-base">Devices Deployed</div>
-          </motion.div>
-          <motion.div {...fadeIn} transition={{ delay: 0.3 }}>
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">99.9%</div>
-            <div className="text-white/80 text-sm sm:text-base">Average Uptime</div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Case Studies Grid */}
       <section className="section-container">
         <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
