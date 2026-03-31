@@ -42,51 +42,6 @@ export default function Careers() {
     }
   ];
 
-  const positions = [
-    {
-      title: 'Embedded Systems Engineer',
-      type: 'Full-time',
-      experience: '2-5 years',
-      skills: ['C/C++', 'RTOS', 'ARM Cortex-M', 'PCB Design', 'BLE/Wi-Fi'],
-      description: 'Design and develop firmware for low-power MCUs and IoT devices.'
-    },
-    {
-      title: 'Machine Learning Engineer',
-      type: 'Full-time',
-      experience: '3-6 years',
-      skills: ['Python', 'PyTorch/TensorFlow', 'Computer Vision', 'TinyML', 'MLOps'],
-      description: 'Build and optimize ML models for edge deployment and production systems.'
-    },
-    {
-      title: 'Hardware Engineer',
-      type: 'Full-time',
-      experience: '2-4 years',
-      skills: ['PCB Design', 'Altium/KiCAD', 'Signal Integrity', 'Power Electronics', 'RF'],
-      description: 'Design custom hardware solutions from schematics to production-ready boards.'
-    },
-    {
-      title: 'Edge AI Engineer',
-      type: 'Full-time',
-      experience: '3-5 years',
-      skills: ['TensorRT', 'ONNX', 'Jetson', 'Model Optimization', 'C++/Python'],
-      description: 'Optimize and deploy AI models on edge devices with real-time constraints.'
-    },
-    {
-      title: 'DevOps/MLOps Engineer',
-      type: 'Full-time',
-      experience: '3-6 years',
-      skills: ['Kubernetes', 'Docker', 'CI/CD', 'Kubeflow', 'Python'],
-      description: 'Build and maintain ML infrastructure and deployment pipelines.'
-    },
-    {
-      title: 'Research Engineer (Internship)',
-      type: 'Internship',
-      experience: '0-1 year',
-      skills: ['ML/DL', 'Python', 'Research', 'Problem Solving'],
-      description: 'Work on cutting-edge research projects in TinyML and edge computing.'
-    }
-  ];
-
   const values = [
     'Technical excellence over shortcuts',
     'Production readiness, not just prototypes',
@@ -170,67 +125,6 @@ export default function Careers() {
         </motion.div>
       </section>
 
-      {/* Open Positions */}
-      <section className="section-container">
-        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Open Positions
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Join us in building intelligent edge systems
-          </p>
-        </motion.div>
-
-        <div className="max-w-5xl mx-auto space-y-6">
-          {positions.map((position, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="bg-white border border-gray-200 rounded-2xl p-8 card-hover"
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                  <div className="flex flex-wrap gap-3 text-sm">
-                    <span className="px-3 py-1 bg-brand-lightBlue/20 text-brand-navyBlue rounded-full font-medium">
-                      {position.type}
-                    </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full font-medium">
-                      {position.experience}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">{position.description}</p>
-              <div className="mb-4">
-                <div className="text-sm font-semibold text-gray-600 uppercase mb-2">
-                  Required Skills
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {position.skills.map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-gradient-to-r from-brand-lightGrey/20 to-brand-lightBlue/10 border border-brand-lightBlue/30 text-gray-800 rounded-lg text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <a
-                href="#apply"
-                className="inline-block px-6 py-3 bg-brand-darkBlue text-white font-medium rounded-lg hover:bg-brand-navyBlue transition-colors"
-              >
-                Apply Now
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* Application Form */}
       <section id="apply" className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="max-w-3xl mx-auto">
@@ -238,7 +132,7 @@ export default function Careers() {
             Apply Now
           </h2>
           <p className="text-xl text-gray-600 mb-12 text-center">
-            Send us your resume and LinkedIn profile
+            Send us your resume and tell us about yourself
           </p>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
@@ -282,17 +176,14 @@ export default function Careers() {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Position *
+                    Area of Interest *
                   </label>
-                  <select
+                  <input
+                    type="text"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select Position</option>
-                    {positions.map((pos, idx) => (
-                      <option key={idx} value={pos.title}>{pos.title}</option>
-                    ))}
-                  </select>
+                    placeholder="e.g., Embedded Systems, AI/ML, Hardware Design"
+                  />
                 </div>
               </div>
 
