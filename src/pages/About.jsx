@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiTarget, FiEye, FiAward, FiUsers, FiTrendingUp, FiCpu, FiHardDrive, FiZap, FiDatabase, FiBarChart2, FiLayers, FiTool } from 'react-icons/fi';
+import { FiTarget, FiEye, FiAward, FiUsers, FiTrendingUp, FiCpu, FiZap, FiDatabase, FiBarChart2, FiCode, FiSettings, FiRefreshCw, FiFilter, FiBox } from 'react-icons/fi';
 
 export default function About() {
   const fadeIn = {
@@ -48,7 +48,7 @@ export default function About() {
 
   const capabilities = [
     {
-      icon: <FiHardDrive size={28} />,
+      icon: <FiBox size={28} />,
       title: 'Custom Hardware Design & Prototyping',
       description: 'Design and development of sensor-integrated, power-optimized embedded hardware for AI workloads.',
       simpleDesc: 'We design and build small, smart hardware tailored to your needs.'
@@ -60,19 +60,19 @@ export default function About() {
       simpleDesc: 'We create and train machine learning models that run directly on tiny devices like sensors or wearables.'
     },
     {
-      icon: <FiLayers size={28} />,
+      icon: <FiCode size={28} />,
       title: 'Firmware & Software Development',
       description: 'End-to-end software stack development for sensor interfacing, data acquisition, ML inference, and edge communication.',
       simpleDesc: 'We develop the software that connects everything — from sensors to apps — so your solution works smoothly from start to finish.'
     },
     {
-      icon: <FiZap size={28} />,
+      icon: <FiSettings size={28} />,
       title: 'System Integration & Deployment',
       description: 'Seamless integration of ML models with embedded platforms (e.g., ARM Cortex-M, ESP32, NRF, etc.), including OTA updates and performance tuning.',
       simpleDesc: 'We help you roll out your solution and keep it running reliably with ongoing updates and support.'
     },
     {
-      icon: <FiTool size={28} />,
+      icon: <FiRefreshCw size={28} />,
       title: 'Lifecycle Support & Maintenance',
       description: 'Post-deployment monitoring, performance analysis, and model updates.',
       simpleDesc: 'Easy deployment and long-term support to keep your systems running smoothly.'
@@ -81,7 +81,7 @@ export default function About() {
 
   const dataCapabilities = [
     {
-      icon: <FiDatabase size={28} />,
+      icon: <FiFilter size={28} />,
       title: 'Sensor Data Preprocessing & Analysis',
       description: 'Noise reduction, feature extraction, and time-series analysis for real-time and batch processing.',
       simpleDesc: 'We clean, organize, and analyze your data to highlight what matters most.'
@@ -93,7 +93,7 @@ export default function About() {
       simpleDesc: 'We create intuitive dashboards that let you track key metrics and spot trends at a glance.'
     },
     {
-      icon: <FiTrendingUp size={28} />,
+      icon: <FiTarget size={28} />,
       title: 'Data-Driven Optimization',
       description: 'Feedback loops for model retraining, system tuning, and predictive maintenance.',
       simpleDesc: 'We help you use insights from your data to improve performance, prevent problems, and plan ahead.'
