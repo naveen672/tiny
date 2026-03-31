@@ -105,8 +105,9 @@ export default function About() {
       {/* Hero Section */}
       <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center px-4">
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Building the Future of <span className="gradient-text">Edge Intelligence</span>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Building the Future of <br />
+            <span className="gradient-text">Edge Intelligence</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
             Tiny Prism Labs is an engineering-first, R&D-driven technology company specializing in 
@@ -117,7 +118,7 @@ export default function About() {
 
       {/* Mission, Vision, Goal */}
       <section className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

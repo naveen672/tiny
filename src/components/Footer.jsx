@@ -126,18 +126,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-sm text-gray-400">
               © {currentYear} Tiny Prism Labs Private Limited. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/contact" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/contact" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>
