@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin } from 'react-icons/fi';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -116,12 +116,11 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex space-x-4 mt-6">
+              {/* LinkedIn - temporarily commented out (incorrect link)
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1">
                 <FiLinkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1">
-                <FiTwitter size={20} />
-              </a>
+              */}
             </div>
           </div>
         </div>
