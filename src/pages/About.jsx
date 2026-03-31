@@ -33,13 +33,6 @@ export default function About() {
     }
   ];
 
-  const stats = [
-    { number: '50+', label: 'Projects Delivered' },
-    { number: '15+', label: 'Enterprise Clients' },
-    { number: '99.9%', label: 'System Uptime' },
-    { number: '10K+', label: 'Devices Deployed' }
-  ];
-
   const expertise = [
     'Embedded Systems Architecture',
     'TinyML & Edge AI',
@@ -246,25 +239,6 @@ export default function About() {
               <p className="text-gray-600 leading-relaxed text-sm italic">
                 {capability.simpleDesc}
               </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-              <div className="text-white/80 text-sm sm:text-base md:text-lg">{stat.label}</div>
             </motion.div>
           ))}
         </div>
