@@ -207,7 +207,13 @@ export default function Blog() {
             viewport={{ once: true }}
             className="bg-white border border-gray-200 rounded-2xl p-8 text-center card-hover group"
           >
-            <div className="text-5xl mb-4">📝</div>
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/blog/medium.png" 
+                alt="Medium" 
+                className="h-16 w-auto"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-darkBlue transition-colors">
               Medium
             </h3>
