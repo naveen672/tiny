@@ -1,7 +1,68 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiArrowRight } from 'react-icons/fi';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    interest: '',
+    message: '',
+    consent: false
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage('Thank you! Your message has been sent successfully. We will get back to you soon.');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          interest: '',
+          message: '',
+          consent: false
+        });
+      } else {
+        setSubmitMessage('Failed to send message. Please try again or contact us directly via email.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitMessage('Failed to send message. Please try again or contact us directly via email.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -103,7 +164,7 @@ export default function Contact() {
               Fill out the form below and our team will get back to you within 24 hours.
             </p>
 
-            <form className="space-y-6 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -111,6 +172,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="John"
@@ -122,6 +186,9 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Doe"
@@ -135,6 +202,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="john@company.com"
@@ -147,6 +217,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="+91 12345 67890"
                 />
@@ -158,6 +231,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your Company"
@@ -169,6 +245,9 @@ export default function Contact() {
                   What are you interested in? *
                 </label>
                 <select
+                  name="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
@@ -187,6 +266,9 @@ export default function Contact() {
                   Project Details *
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="5"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -197,6 +279,9 @@ export default function Contact() {
               <div className="flex items-start space-x-3">
                 <input
                   type="checkbox"
+                  name="consent"
+                  checked={formData.consent}
+                  onChange={handleChange}
                   required
                   className="mt-1"
                   id="consent"
@@ -207,11 +292,18 @@ export default function Contact() {
                 </label>
               </div>
 
+              {submitMessage && (
+                <div className={`p-4 rounded-lg ${submitMessage.includes('success') ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                  {submitMessage}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white font-semibold rounded-lg hover:from-brand-navyBlue hover:to-brand-lightBlue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full px-8 py-4 bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white font-semibold rounded-lg hover:from-brand-navyBlue hover:to-brand-lightBlue transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Send Message</span>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 <FiSend />
               </button>
             </form>
