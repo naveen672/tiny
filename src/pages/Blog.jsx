@@ -112,9 +112,23 @@ export default function Blog() {
               <div className="p-6 sm:p-8">
                 {/* Platform Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <FiFileText className="text-brand-darkBlue" size={20} />
-                    <span className="text-sm font-semibold text-brand-darkBlue uppercase">
+                  <div className="flex items-center space-x-3">
+                    {blog.platform === 'Medium' ? (
+                      <img 
+                        src="/blog/medium.png" 
+                        alt="Medium" 
+                        className="h-6 w-auto"
+                      />
+                    ) : blog.platform === 'Hackster.io' ? (
+                      <img 
+                        src="/blog/hackster-logo.gif" 
+                        alt="Hackster.io" 
+                        className="h-6 w-auto"
+                      />
+                    ) : (
+                      <FiFileText className="text-brand-darkBlue" size={20} />
+                    )}
+                    <span className="text-sm font-semibold text-gray-700">
                       {blog.platform}
                     </span>
                   </div>
