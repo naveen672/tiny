@@ -1,8 +1,77 @@
 import { motion } from 'framer-motion';
-import { FiCpu, FiZap, FiLayers, FiCheckCircle, FiWifi, FiHardDrive } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiCpu, FiZap, FiLayers, FiCheckCircle, FiWifi, FiHardDrive, FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 export default function EmbeddedSystems() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const developmentImages = [
+    {
+      src: 'Strategic_System_Architecture_1.png',
+      title: 'Strategic System Architecture Planning',
+      description: 'Technology stack evaluation and system architecture blueprints for production-ready embedded systems'
+    },
+    {
+      src: 'Strategic_System_Architecture_2.jpg',
+      title: 'System Architecture Design',
+      description: 'Complete architectural specifications and technical roadmaps for scalable IoT solutions'
+    },
+    {
+      src: 'Advanced_Firmware_Engineering_1.png',
+      title: 'Advanced Firmware Development',
+      description: 'Optimized firmware for low-power MCU operations and real-time edge processing'
+    },
+    {
+      src: 'Advanced_Firmware_Engineering_2.jpg',
+      title: 'Embedded Firmware Engineering',
+      description: 'Robust firmware solutions maximizing MCU capabilities for complex applications'
+    },
+    {
+      src: 'Turnkey_System_Development_1.png',
+      title: 'Turnkey System Integration',
+      description: 'Complete lifecycle development integrating electronics, PCB, and firmware'
+    },
+    {
+      src: 'Turnkey_System_Development_2.jpg',
+      title: 'End-to-End System Development',
+      description: 'Fully integrated embedded solutions from concept to production'
+    },
+    {
+      src: 'Core_Electronics_Design_1.png',
+      title: 'Core Electronics Schematic Design',
+      description: 'Precise electronic schematics with optimized power management and sensor integration'
+    },
+    {
+      src: 'Core_Electronics_Design_2.jpg',
+      title: 'Electronics Design Engineering',
+      description: 'Reliable component relationships and intelligent circuit architecture'
+    },
+    {
+      src: 'PCB_Layout&Fabrication_1.png',
+      title: 'PCB Layout & Design',
+      description: 'Professional PCB layouts for reliable, manufacturable embedded systems'
+    },
+    {
+      src: 'PCB_Layout&Fabrication_2.jpg',
+      title: 'PCB Fabrication Services',
+      description: 'Production-ready board designs with comprehensive testing and validation'
+    }
+  ];
+
+  const handlePrevImage = () => {
+    setSelectedImage((prev) => (prev === 0 ? developmentImages.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setSelectedImage((prev) => (prev === developmentImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') setSelectedImage(null);
+    if (e.key === 'ArrowLeft') handlePrevImage();
+    if (e.key === 'ArrowRight') handleNextImage();
+  };
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -286,6 +355,119 @@ export default function EmbeddedSystems() {
           ))}
         </div>
       </section>
+
+      {/* Embedded Systems Development Gallery */}
+      <section className="section-container bg-white">
+        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Our Work in Action
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Real-world embedded systems development across architecture, firmware, electronics, and PCB design
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {developmentImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedImage(index)}
+            >
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg card-hover">
+                <img
+                  src={`/embedded/${image.src}`}
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-deepNavy/80 via-brand-deepNavy/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">
+                    {image.title}
+                  </h3>
+                  <p className="text-white/90 text-xs sm:text-sm line-clamp-2">
+                    {image.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Image Lightbox */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Close"
+          >
+            <FiX size={32} />
+          </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevImage();
+            }}
+            className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Previous image"
+          >
+            <FiChevronLeft size={32} />
+          </button>
+
+          {/* Image with Title */}
+          <div className="flex flex-col items-center max-w-7xl w-full">
+            <motion.img
+              key={selectedImage}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              src={`/embedded/${developmentImages[selectedImage].src}`}
+              alt={developmentImages[selectedImage].title}
+              className="max-h-[75vh] max-w-full object-contain rounded-lg mb-4"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="text-center px-4">
+              <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">
+                {developmentImages[selectedImage].title}
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base max-w-2xl">
+                {developmentImages[selectedImage].description}
+              </p>
+            </div>
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNextImage();
+            }}
+            className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Next image"
+          >
+            <FiChevronRight size={32} />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+            {selectedImage + 1} / {developmentImages.length}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <section className="section-container bg-gradient-to-r from-brand-darkBlue to-brand-lightBlue text-white">
