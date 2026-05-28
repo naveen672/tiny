@@ -172,30 +172,21 @@ export default function Blog() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {[
-            { name: 'TinyML', icon: '🧠' },
-            { name: 'Computer Vision', icon: '👁️' },
-            { name: 'Edge AI', icon: '⚡' },
-            { name: 'IoT', icon: '🔗' },
-            { name: 'Embedded Systems', icon: '💾' },
-            { name: 'Predictive Maintenance', icon: '🔧' },
-            { name: 'Audio Processing', icon: '🎵' },
-            { name: 'Industrial ML', icon: '🏭' }
-          ].map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-white rounded-xl p-6 border border-gray-200 text-center hover:border-brand-lightBlue hover:shadow-lg transition-all duration-300"
-            >
-              <div className="text-3xl mb-2">{category.icon}</div>
-              <div className="font-semibold text-gray-900">{category.name}</div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto"
+        >
+          <div className="bg-white rounded-2xl p-8 sm:p-12 border border-gray-200 shadow-lg">
+            <img
+              src="/blog/categories.png"
+              alt="Content Categories: TinyML, Computer Vision, Edge AI, IoT, Embedded Systems, Predictive Maintenance, Audio Processing, Industrial ML"
+              className="w-full h-auto"
+            />
+          </div>
+        </motion.div>
       </section>
 
       {/* Publishing Platforms */}
