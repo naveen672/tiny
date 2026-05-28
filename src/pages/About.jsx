@@ -1,8 +1,38 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiTarget, FiEye, FiAward, FiUsers, FiTrendingUp, FiCpu, FiZap, FiDatabase, FiBarChart2, FiCode, FiSettings, FiRefreshCw, FiFilter, FiBox } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiTarget, FiEye, FiAward, FiUsers, FiTrendingUp, FiCpu, FiZap, FiDatabase, FiBarChart2, FiCode, FiSettings, FiRefreshCw, FiFilter, FiBox, FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 
 export default function About() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const teamImages = [
+    '1748872244771.jpeg',
+    '1768393608153.jpeg',
+    'Image (41).jpeg',
+    'Image (42).jpeg',
+    'Image (43).jpeg',
+    'IMG-20220829-WA0002.jpg',
+    'WhatsApp Image 2024-08-22 at 2.36.45 PM.jpg',
+    'WhatsApp Image 2024-09-05 at 1.48.53 PM (2).jpg',
+    'WhatsApp Image 2024-09-05 at 1.48.53 PM.jpg',
+    'WhatsApp Image 2024-09-05 at 1.48.59 PM (1) (1).jpg',
+    'WhatsApp Image 2024-09-05 at 1.48.59 PM.jpg'
+  ];
+
+  const handlePrevImage = () => {
+    setSelectedImage((prev) => (prev === 0 ? teamImages.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setSelectedImage((prev) => (prev === teamImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') setSelectedImage(null);
+    if (e.key === 'ArrowLeft') handlePrevImage();
+    if (e.key === 'ArrowRight') handleNextImage();
+  };
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -352,26 +382,15 @@ export default function About() {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {[
-            '1748872244771.jpeg',
-            '1768393608153.jpeg',
-            'Image (41).jpeg',
-            'Image (42).jpeg',
-            'Image (43).jpeg',
-            'IMG-20220829-WA0002.jpg',
-            'WhatsApp Image 2024-08-22 at 2.36.45 PM.jpg',
-            'WhatsApp Image 2024-09-05 at 1.48.53 PM (2).jpg',
-            'WhatsApp Image 2024-09-05 at 1.48.53 PM.jpg',
-            'WhatsApp Image 2024-09-05 at 1.48.59 PM (1) (1).jpg',
-            'WhatsApp Image 2024-09-05 at 1.48.59 PM.jpg'
-          ].map((image, index) => (
+          {teamImages.map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-lg card-hover group"
+              className="relative aspect-square rounded-2xl overflow-hidden shadow-lg card-hover group cursor-pointer"
+              onClick={() => setSelectedImage(index)}
             >
               <img
                 src={`/team/${image}`}
@@ -383,6 +402,66 @@ export default function About() {
           ))}
         </div>
       </section>
+
+      {/* Image Lightbox */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Close"
+          >
+            <FiX size={32} />
+          </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevImage();
+            }}
+            className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Previous image"
+          >
+            <FiChevronLeft size={32} />
+          </button>
+
+          {/* Image */}
+          <motion.img
+            key={selectedImage}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            src={`/team/${teamImages[selectedImage]}`}
+            alt={`Team member ${selectedImage + 1}`}
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNextImage();
+            }}
+            className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Next image"
+          >
+            <FiChevronRight size={32} />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+            {selectedImage + 1} / {teamImages.length}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <section className="section-container bg-gradient-to-br from-brand-deepNavy to-brand-navyBlue text-white">
