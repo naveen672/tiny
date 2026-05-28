@@ -14,6 +14,7 @@ import Careers from './pages/Careers';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -56,6 +57,7 @@ function App() {
               </Routes>
             </main>
             <Footer />
+            <ScrollToTopButton />
           </div>
         </Router>
       )}
