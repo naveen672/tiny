@@ -125,6 +125,47 @@ export default function Careers() {
         </motion.div>
       </section>
 
+      {/* Team Gallery */}
+      <section className="section-container bg-white">
+        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Life at Tiny Prism Labs
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Get a glimpse of our collaborative work environment and team culture
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
+          {[
+            '1748872244771.jpeg',
+            '1768393608153.jpeg',
+            'Image (41).jpeg',
+            'Image (42).jpeg',
+            'Image (43).jpeg',
+            'IMG-20220829-WA0002.jpg',
+            'WhatsApp Image 2024-08-22 at 2.36.45 PM.jpg',
+            'WhatsApp Image 2024-09-05 at 1.48.53 PM (2).jpg'
+          ].map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="relative aspect-square rounded-2xl overflow-hidden shadow-lg card-hover group"
+            >
+              <img
+                src={`/team/${image}`}
+                alt={`Team culture ${index + 1}`}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-deepNavy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Application Form */}
       <section id="apply" className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
         <motion.div {...fadeIn} className="max-w-3xl mx-auto">
