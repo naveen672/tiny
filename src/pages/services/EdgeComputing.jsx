@@ -1,8 +1,67 @@
 import { motion } from 'framer-motion';
-import { FiZap, FiShield, FiLayers, FiCheckCircle, FiServer, FiLock, FiCpu, FiEye, FiShoppingCart, FiTool, FiActivity, FiPackage } from 'react-icons/fi';
+import { useState } from 'react';
+import { FiZap, FiShield, FiLayers, FiCheckCircle, FiServer, FiLock, FiCpu, FiEye, FiShoppingCart, FiTool, FiActivity, FiPackage, FiChevronLeft, FiChevronRight, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 export default function EdgeComputing() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const deploymentImages = [
+    {
+      src: 'Urban Pulse.png',
+      title: 'Smart City Traffic Intelligence',
+      description: 'Real-time traffic monitoring and analytics for urban environments'
+    },
+    {
+      src: 'Invisible Inspector.png',
+      title: 'Pharmaceutical QC Automation',
+      description: 'Edge-based defect detection on production lines with 4ms latency'
+    },
+    {
+      src: 'Shop Floor Live.png',
+      title: 'Manufacturing Floor Monitoring',
+      description: 'Live production tracking and quality control on the edge'
+    },
+    {
+      src: 'Rail Guardian.png',
+      title: 'Railway Infrastructure Monitoring',
+      description: 'Real-time safety and maintenance monitoring for rail systems'
+    },
+    {
+      src: 'Follow the Suspect.png',
+      title: 'Intelligent Surveillance & Tracking',
+      description: 'Person re-identification across multiple camera feeds'
+    },
+    {
+      src: 'Field Intelligence.png',
+      title: 'Field Deployment Intelligence',
+      description: 'Edge AI solutions for remote and outdoor environments'
+    },
+    {
+      src: 'Circuit & Steel.png',
+      title: 'Industrial Edge Computing',
+      description: 'Hardware-integrated AI for manufacturing environments'
+    },
+    {
+      src: 'Chaos Grid.png',
+      title: 'Multi-Object Tracking & Detection',
+      description: 'Vehicle and pedestrian tracking with edge inference'
+    }
+  ];
+
+  const handlePrevImage = () => {
+    setSelectedImage((prev) => (prev === 0 ? deploymentImages.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setSelectedImage((prev) => (prev === deploymentImages.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') setSelectedImage(null);
+    if (e.key === 'ArrowLeft') handlePrevImage();
+    if (e.key === 'ArrowRight') handleNextImage();
+  };
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -254,6 +313,119 @@ export default function EdgeComputing() {
           ))}
         </div>
       </section>
+
+      {/* Real-World Deployments Gallery */}
+      <section className="section-container bg-white">
+        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Deployments in Action
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Real-world edge AI deployments across industries delivering measurable results
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {deploymentImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedImage(index)}
+            >
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-lg card-hover">
+                <img
+                  src={`/edge/${image.src}`}
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-deepNavy/80 via-brand-deepNavy/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <h3 className="text-white font-bold text-base sm:text-lg mb-1 sm:mb-2">
+                    {image.title}
+                  </h3>
+                  <p className="text-white/90 text-xs sm:text-sm line-clamp-2">
+                    {image.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Image Lightbox */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Close"
+          >
+            <FiX size={32} />
+          </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevImage();
+            }}
+            className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Previous image"
+          >
+            <FiChevronLeft size={32} />
+          </button>
+
+          {/* Image with Title */}
+          <div className="flex flex-col items-center max-w-7xl w-full">
+            <motion.img
+              key={selectedImage}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              src={`/edge/${deploymentImages[selectedImage].src}`}
+              alt={deploymentImages[selectedImage].title}
+              className="max-h-[75vh] max-w-full object-contain rounded-lg mb-4"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="text-center px-4">
+              <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">
+                {deploymentImages[selectedImage].title}
+              </h3>
+              <p className="text-white/80 text-sm sm:text-base max-w-2xl">
+                {deploymentImages[selectedImage].description}
+              </p>
+            </div>
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNextImage();
+            }}
+            className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-3 hover:bg-black/70"
+            aria-label="Next image"
+          >
+            <FiChevronRight size={32} />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+            {selectedImage + 1} / {deploymentImages.length}
+          </div>
+        </div>
+      )}
 
       {/* Core Services */}
       <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10">
