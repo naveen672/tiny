@@ -8,6 +8,11 @@ export default function AIMachineLearning() {
 
   const deploymentImages = [
     {
+      src: 'abc.jpeg',
+      title: 'Industry 4.0 Smart Manufacturing',
+      description: 'Connected industrial AI ecosystem with real-time monitoring and control systems'
+    },
+    {
       src: 'Command Center (2).png',
       title: 'Analytics Chatbot Interface',
       description: 'AI-powered conversational analytics showing production efficiency data and insights'
