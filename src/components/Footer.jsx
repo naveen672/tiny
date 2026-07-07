@@ -20,15 +20,9 @@ export default function Footer() {
                 <span className="font-bold text-base sm:text-lg leading-tight text-white">
                   Tiny Prism Labs
                 </span>
-                <span className="text-xs text-gray-400 leading-tight">
-                  Edge Intelligence
-                </span>
               </div>
             </div>
             <p className="text-xs sm:text-sm text-gray-400 mb-4">
-              Intelligence on the Edge. Innovation at the Core.
-            </p>
-            <p className="text-xs sm:text-sm text-gray-400">
               Building low-power, fully offline, intelligent systems that run directly on devices.
             </p>
           </div>

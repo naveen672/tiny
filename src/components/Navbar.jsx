@@ -55,9 +55,6 @@ export default function Navbar() {
               <span className="font-heading font-bold text-base sm:text-lg leading-tight text-gray-900 group-hover:text-brand-darkBlue transition-colors">
                 Tiny Prism Labs
               </span>
-              <span className="text-xs text-gray-600 leading-tight font-medium group-hover:text-brand-lightBlue transition-colors hidden sm:block">
-                Edge Intelligence
-              </span>
             </div>
           </Link>
 
