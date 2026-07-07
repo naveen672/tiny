@@ -261,13 +261,13 @@ export default function EdgeComputing() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full aspect-video overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0"
           style={{
             backgroundImage: 'url(/edgecomputing.png)',
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
           }}
