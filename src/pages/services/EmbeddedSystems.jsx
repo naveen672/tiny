@@ -158,7 +158,7 @@ export default function EmbeddedSystems() {
       <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0"
           style={{
             backgroundImage: 'url(/embedded.png)',
             backgroundSize: 'cover',
@@ -166,20 +166,6 @@ export default function EmbeddedSystems() {
             backgroundRepeat: 'no-repeat'
           }}
         />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-brand-lightBlue/30 to-white/70" />
-        
-        <motion.div {...fadeIn} className="relative z-10 max-w-5xl mx-auto text-center px-4 py-20">
-          <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-2xl flex items-center justify-center text-white mb-8 mx-auto shadow-2xl">
-            <FiCpu size={40} className="sm:w-12 sm:h-12" />
-          </div>
-          <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 drop-shadow-sm">
-            Embedded Systems Design
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 leading-relaxed font-semibold drop-shadow-sm">
-            Custom hardware and firmware development.
-          </p>
-        </motion.div>
       </section>
 
       {/* Core Services */}
