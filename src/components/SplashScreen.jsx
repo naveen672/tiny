@@ -50,12 +50,9 @@ export default function SplashScreen({ onComplete }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-brand-deepNavy mb-2">
+          <h1 className="font-heading text-3xl md:text-4xl font-bold text-brand-deepNavy">
             Tiny Prism Labs
           </h1>
-          <p className="text-brand-darkBlue text-sm font-medium tracking-wider">
-            INTELLIGENCE ON THE EDGE
-          </p>
         </motion.div>
 
         {/* Loading Bar */}
