@@ -261,18 +261,17 @@ export default function EdgeComputing() {
   return (
     <div className="bg-white pt-20">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-brand-lightGrey/20 via-brand-lightBlue/10 to-brand-lightGrey/20">
-        <motion.div {...fadeIn} className="max-w-4xl mx-auto text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-2xl flex items-center justify-center text-white mb-8 mx-auto">
-            <FiZap size={40} />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Edge Computing Solutions
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-            AI/ML on IoT devices for real-time, on-device decisions.
-          </p>
-        </motion.div>
+      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/edgecomputing.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
       </section>
 
       {/* Edge AI Solutions */}
