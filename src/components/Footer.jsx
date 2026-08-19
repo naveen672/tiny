@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiLinkedin } from 'react-icons/fi';
 
 export default function Footer() {
@@ -6,15 +7,21 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-3 mb-4 group">
               <img
                 src="/tinylogo.png"
                 alt="Tiny Prism Labs"
-                className="h-10 sm:h-12 w-auto"
+                className="h-10 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-110"
               />
               <div className="flex flex-col">
                 <span className="font-bold text-base sm:text-lg leading-tight text-white">
@@ -76,8 +83,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <FiMail className="text-blue-400 mt-1 flex-shrink-0" />
+              <li className="flex items-start space-x-3 group">
+                <FiMail className="text-blue-400 mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-125" />
                 <div className="space-y-1">
                   <a href="mailto:mahesh@tinyprismlabs.com" className="text-sm hover:text-blue-400 transition-colors block">
                     mahesh@tinyprismlabs.com
@@ -87,8 +94,8 @@ export default function Footer() {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
-                <FiPhone className="text-blue-400 mt-1 flex-shrink-0" />
+              <li className="flex items-start space-x-3 group">
+                <FiPhone className="text-blue-400 mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-125" />
                 <div className="space-y-1">
                   <a href="tel:+918553213634" className="text-sm hover:text-blue-400 transition-colors block">
                     +91 8553213634
@@ -98,8 +105,8 @@ export default function Footer() {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
-                <FiMapPin className="text-blue-400 mt-1 flex-shrink-0" />
+              <li className="flex items-start space-x-3 group">
+                <FiMapPin className="text-blue-400 mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-125" />
                 <div>
                   <a href="https://maps.app.goo.gl/poY5KheBExA14ucL6" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-400 transition-colors">
                     Manipal-Gok Bio incubator 1st Floor,<br />
@@ -126,7 +133,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

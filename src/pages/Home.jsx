@@ -113,11 +113,16 @@ export default function Home() {
               className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
             >
               {differentiators.map((item, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center text-white mb-4">{item.icon}</div>
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.25 }}
+                  className="group bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-brand-lightBlue/40 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-lg flex items-center justify-center text-white mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">{item.icon}</div>
                   <h3 className="font-heading font-bold text-gray-900 text-base mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </div>
@@ -286,9 +291,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-gray-200 card-hover"
+              className="group bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-8 border border-gray-200 card-hover"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-14 h-14 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                 {deployment.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">{deployment.title}</h3>
@@ -338,7 +343,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link to={service.link}>
-                <div className="bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 h-full card-hover hover:border-brand-lightBlue/30">
+                <div className="group bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 h-full card-hover hover:border-brand-lightBlue/30">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-darkBlue to-brand-lightBlue rounded-xl flex items-center justify-center text-white mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                     {service.icon}
                   </div>

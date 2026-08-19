@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 
 export default function Navbar() {
@@ -118,12 +118,14 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
+        <AnimatePresence>
+          {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden mt-4 pb-4"
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="lg:hidden mt-4 pb-4 overflow-hidden"
           >
             {navLinks.map((link) =>
               link.submenu ? (
@@ -163,7 +165,8 @@ export default function Navbar() {
               </Link>
             </div>
           </motion.div>
-        )}
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

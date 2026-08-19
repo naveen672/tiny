@@ -109,6 +109,27 @@ export default function About() {
     }
   ];
 
+  const founders = [
+    {
+      name: 'Mahesh Nayak',
+      title: 'CEO',
+      experience: '8 Years of Industrial Experience',
+      image: '/founders/mahesh-nayak.jpg'
+    },
+    {
+      name: 'Ajith K J',
+      title: 'CTO',
+      experience: '9+ Years of Industrial Experience',
+      image: '/founders/ajith-kj.jpg'
+    },
+    {
+      name: 'Errol Joshua',
+      title: 'COO',
+      experience: '6+ Years of Industrial Experience',
+      image: '/founders/errol-joshua.jpg'
+    }
+  ];
+
   const dataCapabilities = [
     {
       icon: <FiFilter size={28} />,
@@ -368,6 +389,44 @@ export default function About() {
             </p>
           </div>
         </motion.div>
+      </section>
+
+      {/* Founders */}
+      <section className="section-container bg-white">
+        <motion.div {...fadeIn} className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Meet the Founders
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            The team leading Tiny Prism Labs' mission to bring intelligence to the edge
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+          {founders.map((founder, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gradient-to-br from-brand-lightGrey/20 to-brand-lightBlue/10 rounded-2xl p-6 sm:p-8 border border-gray-200 card-hover text-center"
+            >
+              <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-full h-full object-cover object-[center_15%]"
+                />
+              </div>
+              <h3 className="font-heading text-xl sm:text-2xl font-bold text-gray-900 mb-1">
+                {founder.name}
+              </h3>
+              <p className="text-brand-darkBlue font-semibold mb-2">{founder.title}</p>
+              <p className="text-gray-600 text-sm">{founder.experience}</p>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Team Photos */}
